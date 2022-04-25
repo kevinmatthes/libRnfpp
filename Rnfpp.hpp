@@ -103,6 +103,7 @@
 
 // Tidying up.
 #ifndef __RNFPP_INTERNAL__
+#undef  EXPORT
 #endif  // ! __RNFPP_INTERNAL__
 
 // Leaving the header.
