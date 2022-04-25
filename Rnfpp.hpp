@@ -105,6 +105,8 @@ class Rnfpp
 
         EXPORT  vector <float> &    get_components  (void);
         EXPORT  int                 get_dimension   (void);
+
+        EXPORT  bool    operator == (const Rnfpp & other);
 };
 
 
