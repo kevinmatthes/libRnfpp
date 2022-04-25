@@ -49,11 +49,19 @@
 % Software.
 archiver.args   = 'rsv';
 archiver.in     = '*.o';
-archiver.out    = ['lib'  '' '.a'];
+archiver.out    = ['lib' 'Rnfpp' '.a'];
 archiver.self   = 'ar';
 archiver.call   = [ archiver.self ' ' archiver.args ' ' archiver.out ' '     ...
                     archiver.in                                              ...
                   ];
+
+compiler.args   = ' -std=c++11 -Wall -Werror -Wextra -Wpedantic -c ';
+compiler.in     = '*.c';
+compiler.out    = '*.o';
+compiler.self   = 'g++';
+compiler.call   = [compiler.self ' ' compiler.args ' ' compiler.in];
+
+
 
 % Miscellaneous.
 misc.self   = 'g++-ar.m';
@@ -83,13 +91,36 @@ disp ('Done.');
 
 
 
-% Call library creation tool.
-disp ([misc.banner 'Create library ' archiver.out ' ...']);
+% Call C++ compiler.
+disp ([misc.banner 'Compiler object files ...']);
 
-disp (archiver.call);
-system (archiver.call);
+disp (compiler.call);
+system (compiler.call);
 
 disp ([misc.banner 'Done.']);
+
+
+
+% Call library creation tool.
+if length (glob (archiver.in));
+    disp ([misc.banner 'Create library ' archiver.out ' ...']);
+
+    disp (archiver.call);
+    system (archiver.call);
+
+    disp ([misc.banner 'Done.']);
+end;
+
+
+
+% Clean artifacts.
+fprintf ([misc.banner 'Remove build artifacts ... ']);
+
+if length (glob (compiler.out));
+    delete (compiler.out);
+end;
+
+disp ('Done.');
 
 
 
