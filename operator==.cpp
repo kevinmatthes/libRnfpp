@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        get_dimension.cpp
+ * \file        operator==.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,15 +41,23 @@
 
 
 /**
- * \brief   Query the dimension of this vector.
- * \return  The requested dimension.
+ * \brief   The equality operator.
+ * \param   other   The vector to compare this one with.
+ * \return  Whether both vectors contain the same components.
  *
- * This method queries the dimension of this vector.
+ * This method checks whether both vectors, this and the other one, share both
+ * the same dimension *and* the same components.
  */
 
-inline int Rnfpp :: get_dimension (void)
+bool Rnfpp :: operator == (const Rnfpp & other)
 {
-    return this -> components.size ();
+    bool ret = this -> get_dimension () == other.get_dimension ();
+
+    for (int i = 0x0; ret && i < this -> get_dimension (); i++)
+        if (! (this -> get_components ()[i] - other.get_components ()[i]))
+            ret = false;
+
+    return ret;
 }
 
 /******************************************************************************/
