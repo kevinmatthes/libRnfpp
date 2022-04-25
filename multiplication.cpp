@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        addition.cpp
+ * \file        multiplication.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,24 +41,19 @@
 
 
 /**
- * \brief   The addition operator.
+ * \brief   The multiplication operator.
  * \param   other   The vector to add this one with.
- * \return  The sum vector.
- * \throws  invalid_argument    In case the vectors are of different dimensions.
+ * \return  The scaled vector.
  *
- * This method returns the sum vector in case both input vectors, this and the
- * other one, share the same dimension.  In case they should be of different
- * dimensions, an according exception will be thrown.
+ * This method will scale this vector by the given scalar.
  */
 
-Rnfpp Rnfpp :: operator + (const Rnfpp & other) const
+Rnfpp Rnfpp :: operator * (const float other) const
 {
-    this -> assert_same_dimension (other);
-
     vector <float> ret = vector <float> (this -> components.size ());
 
     for (dimension_t i = 0x0; i < this -> components.size (); i++)
-        ret[i] = this -> components[i] + other.components[i];
+        ret[i] = this -> components[i] * other;
 
     return Rnfpp (ret);
 }
