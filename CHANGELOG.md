@@ -52,6 +52,7 @@
 ### Changed
 
 * adjust README description
+* update `docs-snippets`
 
 ## [0.0.1] -- 2022-04-25
 
