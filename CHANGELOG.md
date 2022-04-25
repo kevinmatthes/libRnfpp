@@ -47,6 +47,7 @@
 ### Added
 
 * build instruction:  Doxygen
+* create `dimension.cpp`
 * create `Rnfpp.cpp`
 * create `Rnfpp.hpp`
 * Doxygen settings
