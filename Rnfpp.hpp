@@ -45,7 +45,8 @@
  * Includes.
  */
 
-// .
+// The C++ standard library.
+#include <vector>
 
 
 
