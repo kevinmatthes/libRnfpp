@@ -50,11 +50,26 @@
 
 
 
-/*
- * Macros.
+/**
+ * \brief   Symbol export settings for compilations on Windows systems.
+ *
+ * In order to compile a Dynamic Link Libary (DLL) from this source code, the
+ * symbols to export need to be tagged accordingly.
+ *
+ * Since this affects only Windows machines, the settings are implemented as
+ * preprocessor instructions such that the actually required setup can be
+ * requested during the compilation by additional defines.
  */
 
-// .
+#ifdef  __WINDOWS__
+#ifdef  __MAKE_DLL__
+#define EXPORT __declspec (dllexport)
+#else
+#define EXPORT __declspec (dllimport)
+#endif  // ! __MAKE_DLL__
+#else
+#define EXPORT
+#endif  // ! __WINDOWS__
 
 
 
