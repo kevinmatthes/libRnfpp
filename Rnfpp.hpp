@@ -80,6 +80,14 @@ using std :: vector;
  * Type declarations.
  */
 
+/**
+ * \brief   The `Rnfpp` vector class.
+ *
+ * This class is a wrapper around a `std :: vector <float>` in order to perform
+ * mathematical calculations with it.  The name derives from "real vector of n
+ * `float` components, written in C++".
+ */
+
 class Rnfpp
 {
     private:
