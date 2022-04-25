@@ -44,6 +44,11 @@
 
 ## [Unreleased]
 
+### Added
+
+* build instruction:  library creation
+* create `g++-ar.m`
+
 ## [0.0.2] -- 2022-04-25
 
 ### Added
