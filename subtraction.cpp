@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        addition.cpp
+ * \file        subtraction.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,24 +41,24 @@
 
 
 /**
- * \brief   The addition operator.
+ * \brief   The subtraction operator.
  * \param   other   The vector to add this one with.
- * \return  The sum vector.
+ * \return  The difference vector.
  * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
- * This method returns the sum vector in case both input vectors, this and the
- * other one, share the same dimension.  In case they should be of different
- * dimensions, an according exception will be thrown.
+ * This method returns the difference vector in case both input vectors, this
+ * and the other one, share the same dimension.  In case they should be of
+ * different dimensions, an according exception will be thrown.
  */
 
-Rnfpp Rnfpp :: operator + (const Rnfpp & other) const
+Rnfpp Rnfpp :: operator - (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
 
     vector <float> ret = vector <float> (this -> components.size ());
 
     for (dimension_t i = 0x0; i < this -> components.size (); i++)
-        ret[i] = this -> components[i] + other.components[i];
+        ret[i] = this -> components[i] - other.components[i];
 
     return Rnfpp (ret);
 }
