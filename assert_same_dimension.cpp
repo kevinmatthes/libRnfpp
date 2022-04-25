@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        addition.cpp
+ * \file        assert_same_dimension.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,26 +41,20 @@
 
 
 /**
- * \brief   The addition operator.
- * \param   other   The vector to add this one with.
- * \return  The sum vector.
+ * \brief   Ensure two vectors to share their dimension.
+ * \param   other   The vector to test against.
+ * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
- * This method returns the sum vector in case both input vectors, this and the
- * other one, share the same dimension.  In case they should be of different
- * dimensions, an according exception will be thrown.
+ * This method tests whether this vector is of the same dimension as the given
+ * other one.  If not so, an exception will be thrown.
  */
 
-Rnfpp Rnfpp :: operator + (const Rnfpp & other) const
+inline void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
 {
     if (this -> components.size () != other.components.size ())
         throw invalid_argument ("The given vectors have different dimensions!");
 
-    vector <float> ret = vector <float> (this -> components.size ());
-
-    for (dimension_t i = 0x0; i < this -> components.size (); i++)
-        ret[i] = this -> components[i] + other.components[i];
-
-    return Rnfpp (ret);
+    return;
 }
 
 /******************************************************************************/
