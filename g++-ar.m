@@ -92,7 +92,7 @@ disp ('Done.');
 
 
 % Call C++ compiler.
-disp ([misc.banner 'Compiler object files ...']);
+disp ([misc.banner 'Compile object files ...']);
 
 disp (compiler.call);
 system (compiler.call);
