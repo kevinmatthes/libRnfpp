@@ -26,7 +26,7 @@
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
- * This file introduces the `Rnfpp` vector class.
+ * This file introduces the Rnfpp vector class.
  */
 
 /******************************************************************************/
@@ -85,7 +85,7 @@ using std :: vector;
  */
 
 /**
- * \brief   The `Rnfpp` vector class.
+ * \brief   The Rnfpp vector class.
  *
  * This class is a wrapper around a `std :: vector <float>` in order to perform
  * mathematical calculations with it.  The name derives from "real vector of n
