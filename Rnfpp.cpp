@@ -63,7 +63,7 @@ inline Rnfpp :: Rnfpp (void)
  * resulting object.
  */
 
-inline Rnfpp :: Rnfpp (const int dimension)
+inline Rnfpp :: Rnfpp (const dimension_t dimension)
 {
     this -> components = vector <float> (dimension);
     return;
