@@ -44,6 +44,7 @@
  * \brief   The addition operator.
  * \param   other   The vector to add this one with.
  * \return  The sum vector.
+ * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
  * This method returns the sum vector in case both input vectors, this and the
  * other one, share the same dimension.  In case they should be of different
