@@ -61,6 +61,7 @@
 
 * discarded qualifiers
 * logical errors
+* type conflicts
 
 ## [0.0.2] -- 2022-04-25
 
