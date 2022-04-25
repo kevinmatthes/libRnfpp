@@ -44,6 +44,10 @@
 
 ## [Unreleased]
 
+### Added
+
+* Doxygen settings
+
 ### Changed
 
 * adjust README description
