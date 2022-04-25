@@ -48,7 +48,7 @@
 
 Rnfpp (void)
 {
-    this -> components = vector <float> ();
+    Rnfpp (0x0);
     return;
 }
 
