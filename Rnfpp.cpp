@@ -36,7 +36,7 @@
  */
 
 // This project.
-#include <Rnfpp.hpp>
+#include "Rnfpp.hpp"
 
 
 
@@ -96,7 +96,7 @@ inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
 
 Rnfpp :: Rnfpp (const vector <float> & components)
 {
-    Rnfpp (components.length ());
+    Rnfpp (components.size ());
 
     for (float component : components)
         this -> components.push_back (component);
