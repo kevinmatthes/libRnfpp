@@ -49,6 +49,11 @@
 * build instruction:  library creation
 * create `g++-ar.m`
 
+### Changed
+
+* rename `Rnfpp :: dimension ()` to `Rnfpp :: get_dimension ()`
+* rename `dimension.cpp` to `get_dimension.cpp`
+
 ### Fixed
 
 * fix discarded qualifiers
