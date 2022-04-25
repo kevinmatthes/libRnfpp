@@ -47,6 +47,7 @@
 ### Added
 
 * create `same_dimension.cpp`
+* create `subtraction.cpp`
 
 ## [0.0.3] -- 2022-04-25
 
