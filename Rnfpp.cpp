@@ -46,7 +46,7 @@
  * This is the default constructor which will prepare a new vector.
  */
 
-Rnfpp (void)
+inline Rnfpp (void)
 {
     Rnfpp (0x0);
     return;
@@ -63,7 +63,7 @@ Rnfpp (void)
  * resulting object.
  */
 
-Rnfpp (const int dimension)
+inline Rnfpp (const int dimension)
 {
     this -> components = vector <float> (dimension);
     return;
