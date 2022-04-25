@@ -81,7 +81,7 @@ inline Rnfpp (const int dimension)
 
 Rnfpp (const vector <float> & components)
 {
-    Rnfpp ();
+    Rnfpp (components.length ());
 
     for (float component : components)
         this -> components.push_back (component);
