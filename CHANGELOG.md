@@ -47,6 +47,7 @@
 ### Added
 
 * build instruction:  Doxygen
+* create `Rnfpp.hpp`
 * Doxygen settings
 
 ### Changed
