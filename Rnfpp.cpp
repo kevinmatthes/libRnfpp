@@ -46,7 +46,7 @@
  * This is the default constructor which will prepare a new vector.
  */
 
-inline Rnfpp (void)
+inline Rnfpp :: Rnfpp (void)
 {
     Rnfpp (0x0);
     return;
@@ -63,7 +63,7 @@ inline Rnfpp (void)
  * resulting object.
  */
 
-inline Rnfpp (const int dimension)
+inline Rnfpp :: Rnfpp (const int dimension)
 {
     this -> components = vector <float> (dimension);
     return;
@@ -78,7 +78,7 @@ inline Rnfpp (const int dimension)
  * This constructor will create a deep copy of the given existing object.
  */
 
-inline Rnfpp (const Rnfpp rnfpp)
+inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
 {
     Rnfpp (rnfpp.components);
     return;
@@ -94,7 +94,7 @@ inline Rnfpp (const Rnfpp rnfpp)
  * of the given `std :: vector <float>`.
  */
 
-Rnfpp (const vector <float> & components)
+Rnfpp :: Rnfpp (const vector <float> & components)
 {
     Rnfpp (components.length ());
 
