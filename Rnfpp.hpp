@@ -34,8 +34,8 @@
  */
 
 #pragma once
-#ifndef __RNFPP_H__
-#define __RNFPP_H__
+#ifndef __RNFPP_HPP__
+#define __RNFPP_HPP__
 
 
 
@@ -88,6 +88,6 @@
 #endif  // ! __RNFPP_INTERNAL__
 
 // Leaving the header.
-#endif  // ! __RNFPP_H__
+#endif  // ! __RNFPP_HPP__
 
 /******************************************************************************/
