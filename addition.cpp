@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        equality.cpp
+ * \file        addition.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,12 +41,13 @@
 
 
 /**
- * \brief   The equality operator.
- * \param   other   The vector to compare this one with.
- * \return  Whether both vectors contain the same components.
+ * \brief   The addition operator.
+ * \param   other   The vector to add this one with.
+ * \return  The sum vector.
  *
- * This method checks whether both vectors, this and the other one, share both
- * the same dimension *and* the same components.
+ * This method returns the sum vector in case both input vectors, this and the
+ * other one, share the same dimension.  In case they should be of different
+ * dimensions, an according exception will be thrown.
  */
 
 bool Rnfpp :: operator == (const Rnfpp & other) const
