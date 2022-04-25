@@ -72,6 +72,21 @@ inline Rnfpp (const int dimension)
 
 
 /**
+ * \brief   Construct a new Rnfpp object from an existing one.
+ * \param   rnfpp   The existing object to copy.
+ *
+ * This constructor will create a deep copy of the given existing object.
+ */
+
+Rnfpp (const Rnfpp rnfpp)
+{
+    Rnfpp (rnfpp.components);
+    return;
+}
+
+
+
+/**
  * \brief   Construct a new Rnfpp object from a given component vector.
  * \param   components  The components to hold.
  *
