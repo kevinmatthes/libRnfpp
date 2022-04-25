@@ -48,6 +48,7 @@
 
 * build instruction:  Doxygen
 * create `dimension.cpp`
+* create `get_components.cpp`
 * create `Rnfpp.cpp`
 * create `Rnfpp.hpp`
 * Doxygen settings
