@@ -56,7 +56,7 @@ archiver.call   = [ archiver.self ' ' archiver.args ' ' archiver.out ' '     ...
                   ];
 
 compiler.args   = ' -std=c++11 -Wall -Werror -Wextra -Wpedantic -c ';
-compiler.in     = '*.c';
+compiler.in     = '*.cpp';
 compiler.out    = '*.o';
 compiler.self   = 'g++';
 compiler.call   = [compiler.self ' ' compiler.args ' ' compiler.in];
