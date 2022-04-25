@@ -18,13 +18,15 @@
 
 /**
  * \author      Kevin Matthes
- * \brief       .
+ * \brief       The main header of this library.
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        .h
+ * \file        Rnfpp.hpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
+ *
+ * This file introduces the `Rnfpp` vector class.
  */
 
 /******************************************************************************/
