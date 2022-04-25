@@ -54,7 +54,7 @@ bool Rnfpp :: operator == (const Rnfpp & other)
     bool ret = this -> get_dimension () == other.get_dimension ();
 
     for (int i = 0x0; ret && i < this -> get_dimension (); i++)
-        if (! (this -> get_components ()[i] - other.get_components ()[i]))
+        if (! (this -> components[i] - other.components[i]))
             ret = false;
 
     return ret;
