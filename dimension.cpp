@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        Rnfpp.cpp
+ * \file        dimension.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,67 +41,15 @@
 
 
 /**
- * \brief   Construct a new Rnfpp object.
+ * \brief   Query the dimension of this vector.
+ * \return  The requested dimension.
  *
- * This is the default constructor which will prepare a new vector.
+ * This method queries the dimension of this vector.
  */
 
-inline Rnfpp :: Rnfpp (void)
+inline int Rnfpp :: dimension (void)
 {
-    Rnfpp (0x0);
-    return;
-}
-
-
-
-/**
- * \brief   Construct a new Rnfpp object.
- * \param   dimension   The expected initial dimension.
- *
- * This constructor will prepare a new vector and give it the expected initial
- * dimension.  This benefits the performance in later applications of the
- * resulting object.
- */
-
-inline Rnfpp :: Rnfpp (const int dimension)
-{
-    this -> components = vector <float> (dimension);
-    return;
-}
-
-
-
-/**
- * \brief   Construct a new Rnfpp object from an existing one.
- * \param   rnfpp   The existing object to copy.
- *
- * This constructor will create a deep copy of the given existing object.
- */
-
-inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
-{
-    Rnfpp (rnfpp.components);
-    return;
-}
-
-
-
-/**
- * \brief   Construct a new Rnfpp object from a given component vector.
- * \param   components  The components to hold.
- *
- * This constructor prepares a new vector and initialises it with the components
- * of the given `std :: vector <float>`.
- */
-
-Rnfpp :: Rnfpp (const vector <float> & components)
-{
-    Rnfpp (components.size ());
-
-    for (float component : components)
-        this -> components.push_back (component);
-
-    return;
+    return this -> components.size ();
 }
 
 /******************************************************************************/
