@@ -46,6 +46,7 @@
 
 ### Added
 
+* build instruction:  Doxygen
 * Doxygen settings
 
 ### Changed
