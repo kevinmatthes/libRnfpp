@@ -44,12 +44,12 @@
  * \brief   Get the components object.
  * \return  The requested components of this vector.
  *
- * The getter method for the componets held by this vector.
+ * The getter method for the components held by this vector.
  */
 
 inline vector <float> Rnfpp :: get_components (void)
 {
-    return this -> components.size ();
+    return this -> components;
 }
 
 /******************************************************************************/
