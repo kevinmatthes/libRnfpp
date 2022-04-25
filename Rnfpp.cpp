@@ -18,7 +18,7 @@
 
 /**
  * \author      Kevin Matthes
- * \brief       The `Rnfpp` vector class.
+ * \brief       The Rnfpp vector class.
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
@@ -26,7 +26,7 @@
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
- * This file implements the `Rnfpp` vector class.
+ * This file implements the Rnfpp vector class.
  */
 
 /******************************************************************************/
@@ -41,7 +41,7 @@
 
 
 /**
- * \brief   Construct a new `Rnfpp` object.
+ * \brief   Construct a new Rnfpp object.
  *
  * This is the default constructor which will prepare a new vector.
  */
@@ -49,6 +49,26 @@
 Rnfpp (void)
 {
     this -> components = vector <float> ();
+    return;
+}
+
+
+
+/**
+ * \brief   Construct a new Rnfpp object from a given component vector.
+ * \param   components  The components to hold.
+ *
+ * This constructor prepares a new vector and initialises it with the components
+ * of the given `std :: vector <float>`.
+ */
+
+Rnfpp (const vector <float> & components)
+{
+    Rnfpp ();
+
+    for (float component : components)
+        this -> components.push_back (component);
+
     return;
 }
 
