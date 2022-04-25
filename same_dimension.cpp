@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        assert_same_dimension.cpp
+ * \file        same_dimension.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,20 +41,17 @@
 
 
 /**
- * \brief   Ensure two vectors to share their dimension.
+ * \brief   Check whether two vectors share their dimension.
  * \param   other   The vector to test against.
- * \throws  invalid_argument    In case the vectors are of different dimensions.
+ * \return  Whether the given vectors share their dimension.
  *
  * This method tests whether this vector is of the same dimension as the given
- * other one.  If not so, an exception will be thrown.
+ * other one.
  */
 
-inline void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
+inline bool Rnfpp :: same_dimension (const Rnfpp & other) const
 {
-    if (this -> components.size () != other.components.size ())
-        throw invalid_argument ("The given vectors have different dimensions!");
-
-    return;
+    return this -> components.size () == other.components.size ();
 }
 
 /******************************************************************************/
