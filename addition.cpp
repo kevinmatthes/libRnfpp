@@ -53,8 +53,7 @@
 
 Rnfpp Rnfpp :: operator + (const Rnfpp & other) const
 {
-    if (this -> components.size () != other.components.size ())
-        throw invalid_argument ("The given vectors have different dimensions!");
+    this -> assert_same_dimension (other);
 
     vector <float> ret = vector <float> (this -> components.size ());
 
