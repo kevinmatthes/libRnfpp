@@ -50,15 +50,17 @@
  * dimensions, an according exception will be thrown.
  */
 
-bool Rnfpp :: operator == (const Rnfpp & other) const
+Rnfpp Rnfpp :: operator + (const Rnfpp & other) const
 {
-    bool ret = this -> get_dimension () == other.get_dimension ();
+    if (this -> components.size () != other.components.size ())
+        throw invalid_argument ("The given vectors have different dimensions!");
 
-    for (int i = 0x0; ret && i < this -> get_dimension (); i++)
-        if (! (this -> components[i] - other.components[i]))
-            ret = false;
+    vector <float> ret = vector <float> (this -> components.size ());
 
-    return ret;
+    for (dimension_t i = 0x0; i < this -> components.size (); i++)
+        ret[i] = this -> components[i] + other.components[i];
+
+    return Rnfpp (ret);
 }
 
 /******************************************************************************/
