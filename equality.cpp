@@ -49,7 +49,7 @@
  * the same dimension *and* the same components.
  */
 
-bool Rnfpp :: operator == (const Rnfpp & other)
+bool Rnfpp :: operator == (const Rnfpp & other) const
 {
     bool ret = this -> get_dimension () == other.get_dimension ();
 
