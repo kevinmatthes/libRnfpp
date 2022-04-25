@@ -49,6 +49,10 @@
 * build instruction:  library creation
 * create `g++-ar.m`
 
+### Fixed
+
+* fix discarded qualifiers
+
 ## [0.0.2] -- 2022-04-25
 
 ### Added
