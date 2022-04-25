@@ -107,6 +107,7 @@ class Rnfpp
         EXPORT  int                 get_dimension   (void)              const;
 
         EXPORT  bool    operator == (const Rnfpp & other)               const;
+        EXPORT  Rnfpp & operator +  (const Rnfpp & other)   const;
 };
 
 
