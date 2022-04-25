@@ -50,10 +50,12 @@
  */
 
 // The C++ standard library.
+#include <cmath>
 #include <stdexcept>
 #include <vector>
 
 // Namespace settings.
+using std :: abs;
 using std :: invalid_argument;
 using std :: vector;
 

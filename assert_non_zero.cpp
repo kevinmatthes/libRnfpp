@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        assert_same_dimension.cpp
+ * \file        assert_non_zero.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,18 +41,18 @@
 
 
 /**
- * \brief   Ensure two vectors to share their dimension.
- * \param   other   The vector to test against.
- * \throws  invalid_argument    In case the vectors are of different dimensions.
+ * \brief   Ensure an object to be unequal to zero.
+ * \param   other   The object to test.
+ * \throws  invalid_argument    In case the object is zero.
  *
- * This method tests whether this vector is of the same dimension as the given
- * other one.  If not so, an exception will be thrown.
+ * This method tests whether the given object is zero.  If so, an exception will
+ * be thrown.
  */
 
-inline void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
+inline void Rnfpp :: assert_non_zero (const float other) const
 {
-    if (! this -> same_dimension (other))
-        throw invalid_argument ("The given vectors have different dimensions!");
+    if (! abs (other))
+        throw invalid_argument ("A value unequal to zero is required!");
 
     return;
 }
