@@ -48,6 +48,9 @@
 // The C++ standard library.
 #include <vector>
 
+// Namespace settings.
+using std :: vector;
+
 
 
 /**
@@ -77,7 +80,16 @@
  * Type declarations.
  */
 
-// .
+class Rnfpp
+{
+    private:
+        vector <float>  components;
+
+    public:
+        EXPORT  Rnfpp   (void);
+        EXPORT  Rnfpp   (const vector <float> components);
+        EXPORT  Rnfpp   (const Rnfpp & rnfpp);
+};
 
 
 
