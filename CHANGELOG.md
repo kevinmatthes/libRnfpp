@@ -44,6 +44,8 @@
 
 ## [Unreleased]
 
+## [0.0.2] -- 2022-04-25
+
 ### Added
 
 * build instruction:  Doxygen
