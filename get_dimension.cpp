@@ -47,7 +47,7 @@
  * This method queries the dimension of this vector.
  */
 
-inline int Rnfpp :: get_dimension (void) const
+inline dimension_t Rnfpp :: get_dimension (void) const
 {
     return this -> components.size ();
 }
