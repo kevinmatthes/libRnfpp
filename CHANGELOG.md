@@ -46,6 +46,7 @@
 
 ### Added
 
+* create `multiplication.cpp`
 * create `same_dimension.cpp`
 * create `subtraction.cpp`
 
