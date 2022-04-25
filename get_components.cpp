@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        dimension.cpp
+ * \file        get_components.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,13 +41,13 @@
 
 
 /**
- * \brief   Query the dimension of this vector.
- * \return  The requested dimension.
+ * \brief   Get the components object.
+ * \return  The requested components of this vector.
  *
- * This method queries the dimension of this vector.
+ * The getter method for the componets held by this vector.
  */
 
-inline int Rnfpp :: dimension (void)
+inline vector <float> Rnfpp :: get_components (void)
 {
     return this -> components.size ();
 }
