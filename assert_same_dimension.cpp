@@ -51,7 +51,7 @@
 
 inline void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
 {
-    if (this -> components.size () != other.components.size ())
+    if (! this -> same_dimension (other))
         throw invalid_argument ("The given vectors have different dimensions!");
 
     return;
