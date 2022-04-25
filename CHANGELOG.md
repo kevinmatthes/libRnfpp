@@ -48,6 +48,7 @@
 
 * build instruction:  library creation
 * create `addition.cpp`
+* create `assert_same_dimension.cpp`
 * create `equality.cpp`
 * create `g++-ar.m`
 
