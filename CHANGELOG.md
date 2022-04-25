@@ -46,6 +46,7 @@
 
 ### Added
 
+* create `assert_non_zero.cpp`
 * create `multiplication.cpp`
 * create `same_dimension.cpp`
 * create `subtraction.cpp`
