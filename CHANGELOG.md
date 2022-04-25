@@ -59,7 +59,8 @@
 
 ### Fixed
 
-* fix discarded qualifiers
+* discarded qualifiers
+* logical errors
 
 ## [0.0.2] -- 2022-04-25
 
