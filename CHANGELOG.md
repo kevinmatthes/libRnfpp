@@ -44,6 +44,8 @@
 
 ## [Unreleased]
 
+## [0.0.3] -- 2022-04-25
+
 ### Added
 
 * build instruction:  library creation
