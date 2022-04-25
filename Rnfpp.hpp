@@ -82,22 +82,6 @@
 
 
 /*
- * Function declarations.
- */
-
-// .
-
-
-
-/*
- * Constants.
- */
-
-// .
-
-
-
-/*
  * End of header.
  */
 
