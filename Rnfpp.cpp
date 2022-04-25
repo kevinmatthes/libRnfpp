@@ -55,6 +55,23 @@ Rnfpp (void)
 
 
 /**
+ * \brief   Construct a new Rnfpp object.
+ * \param   dimension   The expected initial dimension.
+ *
+ * This constructor will prepare a new vector and give it the expected initial
+ * dimension.  This benefits the performance in later applications of the
+ * resulting object.
+ */
+
+Rnfpp (const int dimension)
+{
+    this -> components = vector <float> (dimension);
+    return;
+}
+
+
+
+/**
  * \brief   Construct a new Rnfpp object from a given component vector.
  * \param   components  The components to hold.
  *
