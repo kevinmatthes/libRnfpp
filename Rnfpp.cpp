@@ -98,8 +98,8 @@ Rnfpp :: Rnfpp (const vector <float> & components)
 {
     Rnfpp (components.size ());
 
-    for (float component : components)
-        this -> components.push_back (component);
+    for (dimension_t i = 0x0; i < components.size (); i++)
+        this -> components[i] = components[i];
 
     return;
 }
