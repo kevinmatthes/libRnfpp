@@ -41,9 +41,15 @@
 
 
 /**
+ * \brief   Construct a new `Rnfpp` object.
  *
+ * This is the default constructor which will prepare a new vector.
  */
 
-// .
+Rnfpp (void)
+{
+    this -> components = vector <float> ();
+    return;
+}
 
 /******************************************************************************/
