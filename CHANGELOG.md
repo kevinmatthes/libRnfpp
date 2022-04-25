@@ -47,6 +47,7 @@
 ### Added
 
 * build instruction:  library creation
+* create `addition.cpp`
 * create `equality.cpp`
 * create `g++-ar.m`
 
