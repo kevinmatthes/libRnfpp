@@ -44,6 +44,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+* adjust README description
+
 ## [0.0.1] -- 2022-04-25
 
 ### Added
