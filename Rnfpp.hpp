@@ -50,9 +50,11 @@
  */
 
 // The C++ standard library.
+#include <stdexcept>
 #include <vector>
 
 // Namespace settings.
+using std :: invalid_argument;
 using std :: vector;
 
 
@@ -113,7 +115,7 @@ class Rnfpp
         EXPORT  vector <float> &    get_components  (void);
         EXPORT  dimension_t         get_dimension   (void)  const;
 
-        EXPORT  Rnfpp & operator +  (const Rnfpp & other)   const;
+        EXPORT  Rnfpp   operator +  (const Rnfpp & other)   const;
         EXPORT  bool    operator == (const Rnfpp & other)   const;
 };
 
