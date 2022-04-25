@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      ar-create.m
+%%      g++-ar.m
 %%
 %%  BRIEF
-%%      Create a static library from object files with `ar`.
+%%      Create a static library from C++ source code using `g++` and `ar`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -56,7 +56,7 @@ archiver.call   = [ archiver.self ' ' archiver.args ' ' archiver.out ' '     ...
                   ];
 
 % Miscellaneous.
-misc.self   = 'ar-create.m';
+misc.self   = 'g++-ar.m';
 misc.banner = ['[ ' misc.self ' ] '];
 
 
