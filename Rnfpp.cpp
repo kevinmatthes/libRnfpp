@@ -78,7 +78,7 @@ inline Rnfpp (const int dimension)
  * This constructor will create a deep copy of the given existing object.
  */
 
-Rnfpp (const Rnfpp rnfpp)
+inline Rnfpp (const Rnfpp rnfpp)
 {
     Rnfpp (rnfpp.components);
     return;
