@@ -80,9 +80,16 @@ using std :: vector;
 
 
 
-/*
- * Type declarations.
+/**
+ * \brief   The dimension's data type.
+ *
+ * Since the `std :: vector <float>` has an own data type for its dimension,
+ * this type is an abbreviation therefore.
  */
+
+typedef vector <float> :: size_type dimension_t;
+
+
 
 /**
  * \brief   The Rnfpp vector class.
@@ -99,12 +106,12 @@ class Rnfpp
 
     public:
         EXPORT  Rnfpp   (void);
-        EXPORT  Rnfpp   (const int dimension);
+        EXPORT  Rnfpp   (const dimension_t dimension);
         EXPORT  Rnfpp   (const Rnfpp & rnfpp);
         EXPORT  Rnfpp   (const vector <float> & components);
 
         EXPORT  vector <float> &    get_components  (void);
-        EXPORT  int                 get_dimension   (void)  const;
+        EXPORT  dimension_t         get_dimension   (void)  const;
 
         EXPORT  Rnfpp & operator +  (const Rnfpp & other)   const;
         EXPORT  bool    operator == (const Rnfpp & other)   const;
