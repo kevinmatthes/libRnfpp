@@ -119,6 +119,8 @@ class Rnfpp
         EXPORT  bool    operator == (const Rnfpp & other)   const;
 
         EXPORT  void    assert_same_dimension   (const Rnfpp & other)   const;
+
+        EXPORT  bool    same_dimension  (const Rnfpp & other)   const;
 };
 
 
