@@ -44,6 +44,7 @@
  * \brief   The division operator.
  * \param   other   The scalar to divide this vector by.
  * \return  The scaled vector.
+ * \throws  invalid_argument    In case the scalar should be zero.
  *
  * This method will scale this vector by the given scalar by division.
  */
