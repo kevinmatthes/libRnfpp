@@ -50,6 +50,10 @@
 * create `index.cpp`
 * further docstrings
 
+### Changed
+
+* adjust addition
+
 ### Fixed
 
 * call index elements only using the `.at ()` method of `std :: vector <float>`
