@@ -56,7 +56,7 @@ Rnfpp Rnfpp :: operator / (const float other) const
     vector <float> ret = vector <float> (this -> components.size ());
 
     for (dimension_t i = 0x0; i < this -> components.size (); i++)
-        ret[i] = this -> components[i] / other;
+        ret.at (i) = this -> components.at (i) / other;
 
     return Rnfpp (ret);
 }

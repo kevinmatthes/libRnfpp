@@ -54,7 +54,7 @@ bool Rnfpp :: operator == (const Rnfpp & other) const
     bool ret = this -> same_dimension (other);
 
     for (dimension_t i = 0x0; ret && i < this -> components.size (); i++)
-        if (! (this -> components[i] - other.components[i]))
+        if (! (this -> components.at (i) - other.components.at (i)))
             ret = false;
 
     return ret;
