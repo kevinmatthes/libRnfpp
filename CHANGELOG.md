@@ -51,6 +51,7 @@
 
 ### Fixed
 
+* call index elements only using the `.at ()` method of `std :: vector <float>`
 * indentation in header file
 
 ## [0.0.4] -- 2022-04-26
