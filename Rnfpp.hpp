@@ -58,6 +58,8 @@
 using std :: abs;
 using std :: invalid_argument;
 using std :: out_of_range;
+using std :: pow;
+using std :: sqrt;
 using std :: vector;
 
 
