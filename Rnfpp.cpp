@@ -80,7 +80,7 @@ inline Rnfpp :: Rnfpp (const dimension_t dimension)
 
 inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
 {
-    Rnfpp (rnfpp.components);
+    Rnfpp (rnfpp.get_components ());
     return;
 }
 
