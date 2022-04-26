@@ -53,10 +53,10 @@ Rnfpp Rnfpp :: operator / (const float other) const
 {
     this -> assert_non_zero (other);
 
-    vector <float> ret = vector <float> (this -> components.size ());
+    Rnfpp ret = Rnfpp (this -> get_dimension ());
 
-    for (dimension_t i = 0x0; i < this -> components.size (); i++)
-        ret.at (i) = this -> components.at (i) / other;
+    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
+        ret[i] = (* this)[i] / other;
 
     return Rnfpp (ret);
 }
