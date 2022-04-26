@@ -48,6 +48,10 @@
 
 * further docstrings
 
+### Fixed
+
+* indentation in header file
+
 ## [0.0.4] -- 2022-04-26
 
 ### Added
