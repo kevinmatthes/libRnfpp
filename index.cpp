@@ -44,7 +44,7 @@
  * \brief   The index operator.
  * \param   index   The index position to query.
  * \return  The requested element.
- * \throws  out_of_range    In case there are too few components held.
+ * \throws  out_of_range    In case the given index position is invalid.
  *
  * This method queries the held components for a given index position.  In case
  * there should not be sufficient arguments, an according exception will be
@@ -53,11 +53,7 @@
 
 inline float Rnfpp :: operator [] (const dimension_t index) const
 {
-    if (index >= this -> components.size ())
-        throw out_of_range ( "There are not sufficient components for the reque"
-                             "sted index position!"
-                           );
-
+    this -> assert_range (index);
     return this -> components.at (index);
 }
 

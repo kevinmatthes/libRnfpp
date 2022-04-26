@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        assert_same_dimension.cpp
+ * \file        assert_range.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,18 +41,18 @@
 
 
 /**
- * \brief   Ensure two vectors to share their dimension.
- * \param   other   The vector to test against.
- * \throws  invalid_argument    In case the vectors are of different dimensions.
+ * \brief   Ensure this vector to have sufficient components to query.
+ * \param   index   The index to test against.
+ * \throws  out_of_range    In case the given index position is invalid.
  *
- * This method tests whether this vector is of the same dimension as the given
- * other one.  If not so, an exception will be thrown.
+ * This method tests whether this vector can be queried at the given index
+ * position.  If not so, an according exception will be thrown.
  */
 
-inline void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
+inline void Rnfpp :: assert_range (const dimension_t index) const
 {
-    if (! this -> same_dimension (other))
-        throw invalid_argument ("The given vectors have different dimensions!");
+    if (index >= this -> components.size ())
+        throw out_of_range ("This index position does not exist!");
 
     return;
 }
