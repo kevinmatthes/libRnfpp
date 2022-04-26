@@ -44,6 +44,8 @@
 
 ## [Unreleased]
 
+## [0.0.5] -- 2022-04-26
+
 ### Added
 
 * create `assert_range.cpp`
