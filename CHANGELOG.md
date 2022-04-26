@@ -44,6 +44,8 @@
 
 ## [Unreleased]
 
+## [0.0.4] -- 2022-04-26
+
 ### Added
 
 * build instruction:  DLL compilation
