@@ -120,6 +120,7 @@ class Rnfpp
         EXPORT  Rnfpp   operator +  (const Rnfpp &  other)  const;
         EXPORT  Rnfpp   operator -  (const Rnfpp &  other)  const;
         EXPORT  Rnfpp   operator *  (const float    other)  const;
+        EXPORT  Rnfpp   operator /  (const float    other)  const;
         EXPORT  bool    operator == (const Rnfpp &  other)  const;
 
         EXPORT  void    assert_non_zero         (const float other)     const;
