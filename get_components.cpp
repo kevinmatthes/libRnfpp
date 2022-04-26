@@ -47,9 +47,9 @@
  * The getter method for the components held by this vector.
  */
 
-inline vector <float> & Rnfpp :: get_components (void)
+inline vector <float> & Rnfpp :: get_components (void) const
 {
-    return this -> components;
+    return (vector <float> &) this -> components;
 }
 
 /******************************************************************************/
