@@ -46,7 +46,9 @@
 
 ### Added
 
+* build instruction:  DLL compilation
 * create `assert_non_zero.cpp`
+* create `g++-dll.m`
 * create `multiplication.cpp`
 * create `same_dimension.cpp`
 * create `subtraction.cpp`
