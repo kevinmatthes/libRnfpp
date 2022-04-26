@@ -55,10 +55,10 @@ Rnfpp Rnfpp :: operator - (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
 
-    vector <float> ret = vector <float> (this -> components.size ());
+    Rnfpp ret = Rnfpp (this -> get_dimension ());
 
-    for (dimension_t i = 0x0; i < this -> components.size (); i++)
-        ret.at (i) = this -> components.at (i) - other.components.at (i);
+    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
+        ret[i] = (* this)[i] - other[i];
 
     return Rnfpp (ret);
 }
