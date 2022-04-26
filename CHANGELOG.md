@@ -51,6 +51,11 @@
 * create `same_dimension.cpp`
 * create `subtraction.cpp`
 
+### Fixed
+
+* enable Windows compilation to DLL
+* qualify all methods as `const`
+
 ## [0.0.3] -- 2022-04-25
 
 ### Added
