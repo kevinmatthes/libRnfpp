@@ -46,6 +46,7 @@
 
 ### Added
 
+* create `index.cpp`
 * further docstrings
 
 ### Fixed
