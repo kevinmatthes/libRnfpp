@@ -60,7 +60,7 @@ Rnfpp Rnfpp :: operator + (const Rnfpp & other) const
     for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
         ret[i] = (* this)[i] + other[i];
 
-    return Rnfpp (ret);
+    return ret;
 }
 
 /******************************************************************************/

@@ -58,7 +58,7 @@ Rnfpp Rnfpp :: operator / (const float other) const
     for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
         ret[i] = (* this)[i] / other;
 
-    return Rnfpp (ret);
+    return ret;
 }
 
 /******************************************************************************/
