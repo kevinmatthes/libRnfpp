@@ -51,7 +51,7 @@
 
 inline void Rnfpp :: assert_range (const dimension_t index) const
 {
-    if (index >= this -> components.size ())
+    if (index >= this -> get_dimension ())
         throw out_of_range ("This index position does not exist!");
 
     return;
