@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        multiplication.cpp
+ * \file        division.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,19 +41,21 @@
 
 
 /**
- * \brief   The multiplication operator.
- * \param   other   The vector to add this one with.
+ * \brief   The division operator.
+ * \param   other   The scalar to divide this vector by.
  * \return  The scaled vector.
  *
- * This method will scale this vector by the given scalar.
+ * This method will scale this vector by the given scalar by division.
  */
 
-Rnfpp Rnfpp :: operator * (const float other) const
+Rnfpp Rnfpp :: operator / (const float other) const
 {
+    this -> assert_non_zero (other);
+
     vector <float> ret = vector <float> (this -> components.size ());
 
     for (dimension_t i = 0x0; i < this -> components.size (); i++)
-        ret[i] = this -> components[i] * other;
+        ret[i] = this -> components[i] / other;
 
     return Rnfpp (ret);
 }
