@@ -117,15 +117,15 @@ class Rnfpp
         EXPORT  vector <float> &    get_components  (void)  const noexcept;
         EXPORT  dimension_t         get_dimension   (void)  const noexcept;
 
-        EXPORT  Rnfpp   operator +  (const Rnfpp & other)   const;
-        EXPORT  Rnfpp   operator -  (const Rnfpp & other)   const;
-        EXPORT  Rnfpp   operator *  (const float other)     const;
-        EXPORT  bool    operator == (const Rnfpp & other)   const;
+        EXPORT  Rnfpp   operator +  (const Rnfpp &  other)  const;
+        EXPORT  Rnfpp   operator -  (const Rnfpp &  other)  const;
+        EXPORT  Rnfpp   operator *  (const float    other)  const;
+        EXPORT  bool    operator == (const Rnfpp &  other)  const;
 
         EXPORT  void    assert_non_zero         (const float other)     const;
         EXPORT  void    assert_same_dimension   (const Rnfpp & other)   const;
 
-        EXPORT  bool    same_dimension  (const Rnfpp & other)   const;
+        EXPORT  bool    same_dimension  (const Rnfpp & other)   const noexcept;
 };
 
 
