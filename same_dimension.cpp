@@ -51,7 +51,7 @@
 
 inline bool Rnfpp :: same_dimension (const Rnfpp & other) const noexcept
 {
-    return this -> components.size () == other.components.size ();
+    return this -> get_dimension () == other.get_dimension ();
 }
 
 /******************************************************************************/
