@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        inner.cpp
+ * \file        norm.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,24 +41,15 @@
 
 
 /**
- * \brief   The inner product of two vectors.
- * \param   other   The vector to calculate the inner product with.
- * \return  Whether the given vectors share their dimension.
- * \throws  invalid_argument    In case the vectors are of different dimensions.
+ * \brief   The Euclidean 2-norm.
+ * \return  The Euclidean 2-norm of this vector.
  *
- * This method determines the inner product of this vector with the other one.
+ * This method determines the Euclidean 2-norm of this vector.
  */
 
-float Rnfpp :: inner (const Rnfpp & other) const
+inline float Rnfpp :: inner (const Rnfpp & other) const noexcept
 {
-    this -> assert_same_dimension (other);
-
-    float ret = 0x0;
-
-    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
-        ret += (* this)[i] + other[i];
-
-    return ret;
+    return sqrt (pow (this -> inner ((* this)), 0x2));
 }
 
 /******************************************************************************/
