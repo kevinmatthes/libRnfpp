@@ -42,7 +42,7 @@
 
 /**
  * \brief   The multiplication operator.
- * \param   other   The vector to add this one with.
+ * \param   other   The scalar to scale this vector with.
  * \return  The scaled vector.
  *
  * This method will scale this vector by the given scalar.
