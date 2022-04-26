@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        same_dimension.cpp
+ * \file        inner.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,17 +41,24 @@
 
 
 /**
- * \brief   Check whether two vectors share their dimension.
- * \param   other   The vector to test against.
+ * \brief   The inner product of two vectors.
+ * \param   other   The vector to calculate the inner product with.
  * \return  Whether the given vectors share their dimension.
+ * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
- * This method tests whether this vector is of the same dimension as the given
- * other one.
+ * This method determines the inner product of this vector with the other one.
  */
 
-inline bool Rnfpp :: same_dimension (const Rnfpp & other) const noexcept
+float Rnfpp :: inner (const Rnfpp & other) const
 {
-    return this -> get_dimension () == other.get_dimension ();
+    this -> assert_same_dimension (other);
+
+    float ret = 0x0;
+
+    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
+        ret += (* this)[i] + other[i];
+        
+    return;
 }
 
 /******************************************************************************/
