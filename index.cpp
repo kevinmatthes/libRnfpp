@@ -51,10 +51,10 @@
  * thrown.
  */
 
-inline float Rnfpp :: operator [] (const dimension_t index) const
+inline float & Rnfpp :: operator [] (const dimension_t index) const
 {
     this -> assert_range (index);
-    return this -> components.at (index);
+    return (float &) this -> components.at (index);
 }
 
 /******************************************************************************/

@@ -123,7 +123,7 @@ class Rnfpp
         EXPORT  Rnfpp   operator -  (const Rnfpp &      other)  const;
         EXPORT  Rnfpp   operator /  (const float        other)  const;
         EXPORT  bool    operator == (const Rnfpp &      other)  const;
-        EXPORT  float   operator [] (const dimension_t  index)  const;
+        EXPORT  float & operator [] (const dimension_t  index)  const;
 
         EXPORT  void assert_non_zero        (const float        other)  const;
         EXPORT  void assert_range           (const dimension_t  index)  const;
