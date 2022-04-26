@@ -19,10 +19,10 @@
 %%%%
 %%
 %%  FILE
-%%      g++-ar.m
+%%      g++-dll.m
 %%
 %%  BRIEF
-%%      Create a static library from C++ source code using `g++` and `ar`.
+%%      Create a DLL from C++ source code using `g++`.
 %%
 %%  AUTHOR
 %%      Kevin Matthes
@@ -56,11 +56,9 @@ archiver.call   = [ archiver.self ' ' archiver.args ' ' archiver.out ' '     ...
                   ];
 
 compiler.args   = [ ' -std=c++11 -Wall -Werror -Wextra -Wpedantic -c '       ...
-                    ' -D__RNFPP_INTERNAL__'                                  ...
+                    ' -D__RNFPP_INTERNAL__ '                                 ...
+                    ' -D__WINDOWS__ -D__MAKE_DLL__ '                         ...
                   ];
-if ispc;
-    compiler.args = [compiler.args ' -D__WINDOWS__ -D__MAKE_DLL__ '];
-end;
 compiler.in     = '*.cpp';
 compiler.out    = '*.o';
 compiler.self   = 'g++';
