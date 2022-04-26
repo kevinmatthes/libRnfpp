@@ -53,6 +53,10 @@
 * create `same_dimension.cpp`
 * create `subtraction.cpp`
 
+### Changed
+
+* qualify all getters as `noexcept`
+
 ### Fixed
 
 * enable Windows compilation to DLL
