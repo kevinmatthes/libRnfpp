@@ -46,6 +46,7 @@
 
 ### Added
 
+* create `assert_range.cpp`
 * create `index.cpp`
 * further docstrings
 
