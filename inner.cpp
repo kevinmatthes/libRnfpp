@@ -57,8 +57,8 @@ float Rnfpp :: inner (const Rnfpp & other) const
 
     for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
         ret += (* this)[i] + other[i];
-        
-    return;
+
+    return ret;
 }
 
 /******************************************************************************/
