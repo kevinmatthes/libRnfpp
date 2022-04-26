@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        equality.cpp
+ * \file        index.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,23 +41,24 @@
 
 
 /**
- * \brief   The equality operator.
- * \param   other   The vector to compare this one with.
- * \return  Whether both vectors contain the same components.
+ * \brief   The index operator.
+ * \param   index   The index position to query.
+ * \return  The requested element.
+ * \throws  out_of_range    In case there are too few components held.
  *
- * This method checks whether both vectors, this and the other one, share both
- * the same dimension *and* the same components.
+ * This method queries the held components for a given index position.  In case
+ * there should not be sufficient arguments, an according exception will be
+ * thrown.
  */
 
-bool Rnfpp :: operator == (const Rnfpp & other) const
+inline float Rnfpp :: operator [] (const dimension_t index) const
 {
-    bool ret = this -> same_dimension (other);
+    if (index >= this -> components.size ())
+        throw out_of_range ( "There are not sufficient components for the reque"
+                             "sted index position!"
+                           );
 
-    for (dimension_t i = 0x0; ret && i < this -> components.size (); i++)
-        if (! (this -> components[i] - other.components[i]))
-            ret = false;
-
-    return ret;
+    return this -> components.at (index);
 }
 
 /******************************************************************************/

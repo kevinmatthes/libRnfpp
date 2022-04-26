@@ -57,6 +57,7 @@
 // Namespace settings.
 using std :: abs;
 using std :: invalid_argument;
+using std :: out_of_range;
 using std :: vector;
 
 
@@ -122,7 +123,7 @@ class Rnfpp
         EXPORT  Rnfpp   operator -  (const Rnfpp &      other)  const;
         EXPORT  Rnfpp   operator /  (const float        other)  const;
         EXPORT  bool    operator == (const Rnfpp &      other)  const;
-        EXPORT  float & operator [] (const dimension_t  index)  const;
+        EXPORT  float   operator [] (const dimension_t  index)  const;
 
         EXPORT  void    assert_non_zero         (const float    other)  const;
         EXPORT  void    assert_same_dimension   (const Rnfpp &  other)  const;
