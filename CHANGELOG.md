@@ -53,6 +53,7 @@
 ### Changed
 
 * adjust addition
+* adjust assertions
 
 ### Fixed
 
