@@ -52,8 +52,7 @@
 
 ### Changed
 
-* adjust addition
-* adjust assertions
+* adjust method implementations
 
 ### Fixed
 
