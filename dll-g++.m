@@ -19,7 +19,7 @@
 %%%%
 %%
 %%  FILE
-%%      g++-dll.m
+%%      dll-g++.m
 %%
 %%  BRIEF
 %%      Create a DLL from C++ source code using `g++`.
@@ -67,7 +67,7 @@ compiler.call   = [compiler.self ' ' compiler.args ' ' compiler.in];
 
 
 % Miscellaneous.
-misc.self   = 'g++-ar.m';
+misc.self   = 'dll-g++.m';
 misc.banner = ['[ ' misc.self ' ] '];
 
 
