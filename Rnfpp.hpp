@@ -113,8 +113,8 @@ class Rnfpp
 
     public:
         EXPORT  Rnfpp   (void);
-        EXPORT  Rnfpp   (const dimension_t dimension);
-        EXPORT  Rnfpp   (const Rnfpp & rnfpp);
+        EXPORT  Rnfpp   (const dimension_t      dimension);
+        EXPORT  Rnfpp   (const Rnfpp &          rnfpp);
         EXPORT  Rnfpp   (const vector <float> & components);
 
         EXPORT  vector <float> &    get_components  (void)  const noexcept;
