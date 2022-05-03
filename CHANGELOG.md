@@ -44,6 +44,14 @@
 
 ## [Unreleased]
 
+### Changed
+
+* rename `g++-dll.m` to `dll-g++.m`
+
+### Fixed
+
+* incorrect variable values in build instructions
+
 ## [0.0.5] -- 2022-04-26
 
 ### Added
