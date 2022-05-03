@@ -47,10 +47,15 @@
 ### Changed
 
 * rename `g++-dll.m` to `dll-g++.m`
+* unite `authors.yaml` with `project.yaml`
 
 ### Fixed
 
 * incorrect variable values in build instructions
+
+### Removed
+
+* `authors.yaml`
 
 ## [0.0.5] -- 2022-04-26
 
