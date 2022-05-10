@@ -78,7 +78,7 @@ invoked by calling `repository-manual.m`.
 | `ar`              | application   | create and update static libraries    |
 | `docs-snippets`   | repository    | documentation constants               |
 | Doxygen           | application   | creation of source code documentation |
-| `g++`             | application   | C++ compiler                          |
+| G++               | application   | C++ compiler                          |
 | GNU Octave        | application   | execution of the provided scripts     |
 | `make`            | application   | finalisation of Doxygen documentation |
 | Pandoc            | application   | compilation of repository manual      |
