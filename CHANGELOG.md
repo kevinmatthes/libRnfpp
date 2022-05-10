@@ -50,6 +50,7 @@
 
 ### Changed
 
+* optimise repository manual build instruction
 * rename `g++-dll.m` to `dll-g++.m`
 * unite `authors.yaml` with `project.yaml`
 * update `docs-snippets`
