@@ -52,6 +52,8 @@
 
 * rename `g++-dll.m` to `dll-g++.m`
 * unite `authors.yaml` with `project.yaml`
+* update `docs-snippets`
+* update `routines`
 
 ### Fixed
 
