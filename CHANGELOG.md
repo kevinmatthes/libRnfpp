@@ -58,6 +58,7 @@
 
 ### Fixed
 
+* G++ typos
 * incorrect variable values in build instructions
 
 ### Removed
