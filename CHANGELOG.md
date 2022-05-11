@@ -46,6 +46,7 @@
 
 ### Added
 
+* create `CITATION.cff`
 * submodule `blank`
 
 ### Changed
