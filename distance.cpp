@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        inner.cpp
+ * \file        distance.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,24 +41,18 @@
 
 
 /**
- * \brief   The inner product of two vectors.
- * \param   other   The vector to calculate the inner product with.
- * \return  The inner product.
+ * \brief   The distance between two vectors.
+ * \param   other   The vector to calculate the distance to.
+ * \return  The distance.
  * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
- * This method determines the inner product of this vector with the other one.
+ * This method determines the distance between this vector and the other one.
  */
 
-float Rnfpp :: inner (const Rnfpp & other) const
+inline float Rnfpp :: distance (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
-
-    float ret = 0x0;
-
-    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
-        ret += (* this)[i] + other[i];
-
-    return ret;
+    return ((* this) - other).norm ();
 }
 
 /******************************************************************************/
