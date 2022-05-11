@@ -128,6 +128,8 @@ class Rnfpp
         EXPORT  Rnfpp   (const fvec_t &     components);
         EXPORT  Rnfpp   (const Rnfpp &      rnfpp);
 
+        EXPORT  ~Rnfpp  (void);
+
         EXPORT  fvec_t &    get_components  (void)  const noexcept;
         EXPORT  dimension_t get_dimension   (void)  const noexcept;
 
