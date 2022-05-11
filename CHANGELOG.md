@@ -48,6 +48,7 @@
 
 * create `CITATION.cff`
 * submodule `blank`
+* typedef:  `fvec_t`
 
 ### Changed
 
