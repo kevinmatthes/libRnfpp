@@ -47,6 +47,8 @@
 ### Added
 
 * create `CITATION.cff`
+* create `distance.cpp`
+* create `set_components.cpp`
 * submodule `blank`
 * typedef:  `fvec_t`
 
