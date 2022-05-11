@@ -120,16 +120,18 @@ typedef vector <float> fvec_t;
 class Rnfpp
 {
     private:
-        vector <float>  components;
+        fvec_t  components;
 
     public:
         EXPORT  Rnfpp   (void);
-        EXPORT  Rnfpp   (const dimension_t      dimension);
-        EXPORT  Rnfpp   (const Rnfpp &          rnfpp);
-        EXPORT  Rnfpp   (const vector <float> & components);
+        EXPORT  Rnfpp   (const dimension_t  dimension);
+        EXPORT  Rnfpp   (const fvec_t &     components);
+        EXPORT  Rnfpp   (const Rnfpp &      rnfpp);
 
-        EXPORT  vector <float> &    get_components  (void)  const noexcept;
-        EXPORT  dimension_t         get_dimension   (void)  const noexcept;
+        EXPORT  fvec_t &    get_components  (void)  const noexcept;
+        EXPORT  dimension_t get_dimension   (void)  const noexcept;
+
+        EXPORT  void set_components (const fvec_t & components) const noexcept;
 
         EXPORT  Rnfpp   operator *  (const float        other)  const;
         EXPORT  Rnfpp   operator +  (const Rnfpp &      other)  const;
