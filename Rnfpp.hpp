@@ -144,6 +144,7 @@ class Rnfpp
         EXPORT  void assert_range           (const dimension_t  index)  const;
         EXPORT  void assert_same_dimension  (const Rnfpp &      other)  const;
 
+        EXPORT  float   distance        (const Rnfpp & other)   const;
         EXPORT  float   inner           (const Rnfpp & other)   const;
         EXPORT  float   norm            (void)                  const noexcept;
         EXPORT  bool    same_dimension  (const Rnfpp & other)   const noexcept;
