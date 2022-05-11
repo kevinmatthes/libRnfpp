@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        get_components.cpp
+ * \file        set_components.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,15 +41,16 @@
 
 
 /**
- * \brief   Get the components object.
- * \return  The requested components of this vector.
+ * \brief   Set the components object.
+ * \param   components  The components to hold by this vector.
  *
- * The getter method for the components held by this vector.
+ * The setter method for the components held by this vector.
  */
 
-inline fvec_t & Rnfpp :: get_components (void) const noexcept
+inline void Rnfpp :: set_components (const fvec_t & components) const noexcept
 {
-    return (fvec_t &) this -> components;
+    this -> components = components;
+    return;
 }
 
 /******************************************************************************/
