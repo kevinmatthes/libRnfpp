@@ -65,7 +65,7 @@ inline Rnfpp :: Rnfpp (void)
 
 inline Rnfpp :: Rnfpp (const dimension_t dimension)
 {
-    this -> components = vector <float> (dimension);
+    this -> components = fvec_t (dimension);
     return;
 }
 
@@ -94,7 +94,7 @@ inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
  * of the given `std :: vector <float>`.
  */
 
-Rnfpp :: Rnfpp (const vector <float> & components)
+Rnfpp :: Rnfpp (const fvec_t & components)
 {
     Rnfpp (components.size ());
 
