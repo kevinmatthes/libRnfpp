@@ -47,7 +47,7 @@
  * The setter method for the components held by this vector.
  */
 
-inline void Rnfpp :: set_components (const fvec_t & components) const noexcept
+inline void Rnfpp :: set_components (const fvec_t & components) noexcept
 {
     this -> components = components;
     return;
