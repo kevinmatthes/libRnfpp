@@ -99,6 +99,17 @@ typedef vector <float> :: size_type dimension_t;
 
 
 /**
+ * \brief   A simple abbreviation for a frequently used type.
+ *
+ * This is an abbreviation for the often used type `std :: vector <float>`.  It
+ * shall keep the source code well readable.
+ */
+
+typedef vector <float> fvec_t;
+
+
+
+/**
  * \brief   The Rnfpp vector class.
  *
  * This class is a wrapper around a `std :: vector <float>` in order to perform
