@@ -217,3 +217,14 @@ references:
     url: https://github.com/kevinmatthes/blank
 
 ################################################################################
+  - type: generic
+    date-released: 2022-05-11
+    version: 0.3
+    abstract: A simple CLI to extract citation information from a CITATION.cff.
+    authors:
+      - family-names: Matthes
+        given-names: Kevin
+    license: GPL-2.0
+    repository-code: https://github.com/kevinmatthes/cffreference
+    title: cffreference
+    url: https://github.com/kevinmatthes/cffreference
