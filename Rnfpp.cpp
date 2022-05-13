@@ -72,21 +72,6 @@ inline Rnfpp :: Rnfpp (const dimension_t dimension)
 
 
 /**
- * \brief   Construct a new Rnfpp object from an existing one.
- * \param   rnfpp   The existing object to copy.
- *
- * This constructor will create a deep copy of the given existing object.
- */
-
-inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
-{
-    Rnfpp (rnfpp.get_components ());
-    return;
-}
-
-
-
-/**
  * \brief   Construct a new Rnfpp object from a given component vector.
  * \param   components  The components to hold.
  *
@@ -101,6 +86,21 @@ Rnfpp :: Rnfpp (const fvec_t & components)
     for (dimension_t i = 0x0; i < components.size (); i++)
         (* this)[i] = components.at (i);
 
+    return;
+}
+
+
+
+/**
+ * \brief   Construct a new Rnfpp object from an existing one.
+ * \param   rnfpp   The existing object to copy.
+ *
+ * This constructor will create a deep copy of the given existing object.
+ */
+
+inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
+{
+    Rnfpp (rnfpp.get_components ());
     return;
 }
 
