@@ -53,4 +53,19 @@ inline void Rnfpp :: set_components (const fvec_t & components) noexcept
     return;
 }
 
+
+
+/**
+ * \brief   Set the components object.
+ * \param   components  The components to hold by this vector.
+ *
+ * The setter method for the components held by this vector.
+ */
+
+inline void Rnfpp :: set_components (const Rnfpp & components) noexcept
+{
+    this -> components = components.get_components ();
+    return;
+}
+
 /******************************************************************************/

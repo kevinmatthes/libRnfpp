@@ -134,6 +134,7 @@ class Rnfpp
         EXPORT  dimension_t get_dimension   (void)  const noexcept;
 
         EXPORT  void set_components (const fvec_t & components) noexcept;
+        EXPORT  void set_components (const Rnfpp  & components) noexcept;
 
         EXPORT  Rnfpp   operator *  (const float        other)  const;
         EXPORT  Rnfpp   operator +  (const Rnfpp &      other)  const;
