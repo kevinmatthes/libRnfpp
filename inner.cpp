@@ -49,6 +49,23 @@
  * This method determines the inner product of this vector with the other one.
  */
 
+inline float Rnfpp :: inner (const fvec_t & other) const
+{
+    this -> assert_same_dimension (other);
+    return this -> inner (Rnfpp (other));
+}
+
+
+
+/**
+ * \brief   The inner product of two vectors.
+ * \param   other   The vector to calculate the inner product with.
+ * \return  The inner product.
+ * \throws  invalid_argument    In case the vectors are of different dimensions.
+ *
+ * This method determines the inner product of this vector with the other one.
+ */
+
 float Rnfpp :: inner (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
