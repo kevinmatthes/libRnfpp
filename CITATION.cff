@@ -49,6 +49,20 @@ repository-code: https://github.com/kevinmatthes/libRnfpp
 title: libRnfpp
 url: https://github.com/kevinmatthes/libRnfpp
 
+# Preferred citation.
+preferred-citation:
+  abstract: A simple C++ vector library for real vectors with `float` components.
+  authors:
+    - family-names: Matthes
+      given-names: Kevin
+  date-released: 2022-05-11
+  license: GPL-2.0
+  repository-code: https://github.com/kevinmatthes/libRnfpp
+  title: libRnfpp
+  url: https://github.com/kevinmatthes/libRnfpp
+  type: software-code
+  version: 0.1.0
+
 # References.
 references:
   - type: standard
