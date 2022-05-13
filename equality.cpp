@@ -49,7 +49,23 @@
  * the same dimension *and* the same components.
  */
 
-bool Rnfpp :: operator == (const Rnfpp & other) const
+inline bool Rnfpp :: operator == (const fvec_t & other) const noexcept
+{
+    return this -> same_dimension (other) ? (* this) == Rnfpp (other) : false;
+}
+
+
+
+/**
+ * \brief   The equality operator.
+ * \param   other   The vector to compare this one with.
+ * \return  Whether both vectors contain the same components.
+ *
+ * This method checks whether both vectors, this and the other one, share both
+ * the same dimension *and* the same components.
+ */
+
+bool Rnfpp :: operator == (const Rnfpp & other) const noexcept
 {
     bool ret = this -> same_dimension (other);
 
