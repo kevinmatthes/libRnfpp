@@ -54,8 +54,13 @@ bool Rnfpp :: operator == (const Rnfpp & other) const
     bool ret = this -> same_dimension (other);
 
     for (dimension_t i = 0x0; ret && i < this -> get_dimension (); i++)
-        if (! ((* this)[i] - other[i]))
+    {
+        const float otr = other[i];
+        const float ths = (* this)[i];
+
+        if (otr < ths || otr > ths)
             ret = false;
+    };
 
     return ret;
 }
