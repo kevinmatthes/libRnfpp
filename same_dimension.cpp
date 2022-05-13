@@ -49,6 +49,22 @@
  * other one.
  */
 
+inline bool Rnfpp :: same_dimension (const fvec_t & other) const noexcept
+{
+    return this -> get_dimension () == other.size ();
+}
+
+
+
+/**
+ * \brief   Check whether two vectors share their dimension.
+ * \param   other   The vector to test against.
+ * \return  Whether the given vectors share their dimension.
+ *
+ * This method tests whether this vector is of the same dimension as the given
+ * other one.
+ */
+
 inline bool Rnfpp :: same_dimension (const Rnfpp & other) const noexcept
 {
     return this -> get_dimension () == other.get_dimension ();

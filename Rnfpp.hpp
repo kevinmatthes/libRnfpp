@@ -150,6 +150,7 @@ class Rnfpp
         EXPORT  float   distance        (const Rnfpp & other)   const;
         EXPORT  float   inner           (const Rnfpp & other)   const;
         EXPORT  float   norm            (void)                  const noexcept;
+        EXPORT  bool    same_dimension  (const fvec_t & other)  const noexcept;
         EXPORT  bool    same_dimension  (const Rnfpp & other)   const noexcept;
 };
 
