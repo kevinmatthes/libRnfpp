@@ -47,6 +47,7 @@
 ### Added
 
 * add `preferred-citation`
+* overloads for methods
 * submodule `doxygem.cfg`
 
 ## [0.1.0] -- 2022-05-11
