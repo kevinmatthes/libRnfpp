@@ -240,8 +240,6 @@ references:
     repository-code: https://github.com/kevinmatthes/cffreference
     title: cffreference
     url: https://github.com/kevinmatthes/cffreference
-
-################################################################################
   - abstract: A set of Doxygen setting templates.
     authors:
       - family-names: Matthes
@@ -253,3 +251,5 @@ references:
     type: software-code
     url: https://github.com/doxygen.cfg
     version: 0.0.2
+
+################################################################################
