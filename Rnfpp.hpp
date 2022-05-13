@@ -137,7 +137,9 @@ class Rnfpp
         EXPORT  void set_components (const Rnfpp  & components) noexcept;
 
         EXPORT  Rnfpp   operator *  (const float        other)  const;
+        EXPORT  Rnfpp   operator +  (const fvec_t &     other)  const;
         EXPORT  Rnfpp   operator +  (const Rnfpp &      other)  const;
+        EXPORT  Rnfpp   operator -  (const fvec_t &     other)  const;
         EXPORT  Rnfpp   operator -  (const Rnfpp &      other)  const;
         EXPORT  Rnfpp   operator /  (const float        other)  const;
         EXPORT  bool    operator == (const Rnfpp &      other)  const;

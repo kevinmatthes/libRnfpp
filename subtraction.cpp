@@ -51,6 +51,25 @@
  * different dimensions, an according exception will be thrown.
  */
 
+inline Rnfpp Rnfpp :: operator - (const fvec_t & other) const
+{
+    this -> assert_same_dimension (other);
+    return (* this) - Rnfpp (other);
+}
+
+
+
+/**
+ * \brief   The subtraction operator.
+ * \param   other   The vector to add this one with.
+ * \return  The difference vector.
+ * \throws  invalid_argument    In case the vectors are of different dimensions.
+ *
+ * This method returns the difference vector in case both input vectors, this
+ * and the other one, share the same dimension.  In case they should be of
+ * different dimensions, an according exception will be thrown.
+ */
+
 Rnfpp Rnfpp :: operator - (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
