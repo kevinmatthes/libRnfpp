@@ -42,7 +42,7 @@
 
 /**
  * \brief   The subtraction operator.
- * \param   other   The vector to add this one with.
+ * \param   other   The vector to subtract from this one.
  * \return  The difference vector.
  * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
@@ -61,7 +61,7 @@ inline Rnfpp Rnfpp :: operator - (const fvec_t & other) const
 
 /**
  * \brief   The subtraction operator.
- * \param   other   The vector to add this one with.
+ * \param   other   The vector to subtract from this one.
  * \return  The difference vector.
  * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
