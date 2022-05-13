@@ -44,14 +44,11 @@
  * \brief   The subtraction operator.
  * \param   other   The vector to subtract from this one.
  * \return  The difference vector.
- * \throws  invalid_argument    In case the vectors are of different dimensions.
  *
- * This method returns the difference vector in case both input vectors, this
- * and the other one, share the same dimension.  In case they should be of
- * different dimensions, an according exception will be thrown.
+ * This method returns the difference vector.
  */
 
-inline Rnfpp Rnfpp :: operator - (const float other) const
+Rnfpp Rnfpp :: operator - (const float other) const noexcept
 {
     const float dimension   = this -> get_dimension ();
     fvec_t      ret         = fvec_t (dimension);
