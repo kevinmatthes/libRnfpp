@@ -49,6 +49,25 @@
  * other one.  If not so, an exception will be thrown.
  */
 
+inline void Rnfpp :: assert_same_dimension (const fvec_t & other) const
+{
+    if (! this -> same_dimension (other))
+        throw invalid_argument ("The given vectors have different dimensions!");
+
+    return;
+}
+
+
+
+/**
+ * \brief   Ensure two vectors to share their dimension.
+ * \param   other   The vector to test against.
+ * \throws  invalid_argument    In case the vectors are of different dimensions.
+ *
+ * This method tests whether this vector is of the same dimension as the given
+ * other one.  If not so, an exception will be thrown.
+ */
+
 inline void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
 {
     if (! this -> same_dimension (other))
