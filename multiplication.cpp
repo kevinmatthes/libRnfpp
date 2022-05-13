@@ -48,7 +48,7 @@
  * This method will scale this vector by the given scalar.
  */
 
-Rnfpp Rnfpp :: operator * (const float other) const
+Rnfpp Rnfpp :: operator * (const float other) const noexcept
 {
     Rnfpp ret = Rnfpp (this -> get_dimension ());
 
