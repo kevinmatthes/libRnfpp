@@ -49,9 +49,8 @@
 
 inline Rnfpp & Rnfpp :: normalise (void)
 {
-    const float norm = this -> norm ();
-    this -> assert_non_zero (norm);
-    (* this) /= norm;
+    this -> assert_norm_non_zero ();
+    (* this) /= this -> norm ();
     return (* this);
 }
 
