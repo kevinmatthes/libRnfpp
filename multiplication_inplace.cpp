@@ -48,14 +48,10 @@
  * This method will scale this vector by the given scalar.
  */
 
-Rnfpp Rnfpp :: operator * (const float other) const noexcept
+inline Rnfpp & Rnfpp :: operator *= (const float other) noexcept
 {
-    Rnfpp ret = Rnfpp (this -> get_dimension ());
-
-    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
-        ret[i] = (* this)[i] * other;
-
-    return ret;
+    this -> set_components ((* this) * other);
+    return (* this);
 }
 
 /******************************************************************************/
