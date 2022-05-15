@@ -49,7 +49,11 @@
 * add `preferred-citation`
 * GitHub Action:  automatic CFF validation
 * overloads for methods
-* submodule `doxygem.cfg`
+* submodule `doxygen.cfg`
+
+### Changed
+
+* update `blank`
 
 ## [0.1.0] -- 2022-05-11
 
@@ -67,7 +71,6 @@
 * optimise repository manual build instruction
 * rename `g++-dll.m` to `dll-g++.m`
 * unite `authors.yaml` with `project.yaml`
-* update `blank`
 * update `docs-snippets`
 * update Doxygen settings to work with version 1.9.1
 * update `routines`
