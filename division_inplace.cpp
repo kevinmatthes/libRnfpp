@@ -49,16 +49,11 @@
  * This method will scale this vector by the given scalar by division.
  */
 
-Rnfpp Rnfpp :: operator / (const float other) const
+inline Rnfpp & Rnfpp :: operator /= (const float other)
 {
     this -> assert_non_zero (other);
-
-    Rnfpp ret = Rnfpp (this -> get_dimension ());
-
-    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
-        ret[i] = (* this)[i] / other;
-
-    return ret;
+    this -> set_components ((* this) / other);
+    return (Rnfpp &) (* this);
 }
 
 /******************************************************************************/
