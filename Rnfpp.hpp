@@ -156,7 +156,7 @@ class Rnfpp
         EXPORT  bool    operator == (const Rnfpp &      other)  const noexcept;
         EXPORT  float & operator [] (const dimension_t  index)  const;
 
-        EXPORT  void assert_affinisation    (void);                     const;
+        EXPORT  void assert_affinisation    (void)                      const;
         EXPORT  void assert_non_zero        (const float        other)  const;
         EXPORT  void assert_norm_non_zero   (void)                      const;
         EXPORT  void assert_range           (const dimension_t  index)  const;
