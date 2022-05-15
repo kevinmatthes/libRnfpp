@@ -163,6 +163,7 @@ class Rnfpp
         EXPORT  void assert_same_dimension  (const fvec_t &     other)  const;
         EXPORT  void assert_same_dimension  (const Rnfpp &      other)  const;
 
+        EXPORT  Rnfpp & affinise        (void);
         EXPORT  float   distance        (const fvec_t & other)  const;
         EXPORT  float   distance        (const Rnfpp &  other)  const;
         EXPORT  Rnfpp & homogenise      (void);
