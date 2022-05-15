@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        norm.cpp
+ * \file        homogenise.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,15 +41,16 @@
 
 
 /**
- * \brief   The Euclidean 2-norm.
- * \return  The Euclidean 2-norm of this vector.
+ * \brief   Homogenise this vector.
+ * \return  The homogenised vector.
  *
- * This method determines the Euclidean 2-norm of this vector.
+ * This method homogenises this vector.
  */
 
-inline float Rnfpp :: norm (void) const noexcept
+inline Rnfpp & Rnfpp :: homogenise (void)
 {
-    return sqrt (pow (this -> inner ((* this)), 0x2));
+    this -> components.push_back (0x1);
+    return (* this);
 }
 
 /******************************************************************************/
