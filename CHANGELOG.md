@@ -46,6 +46,7 @@
 
 ### Added
 
+* create `affinise.cpp`
 * create `assert_affinisation.cpp`
 * create `assert_norm_non_zero.cpp`
 * create `homogenise.cpp`
