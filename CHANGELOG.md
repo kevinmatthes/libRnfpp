@@ -47,6 +47,10 @@
 ### Added
 
 * add `preferred-citation`
+* create `addition_inplace.cpp`
+* create `division_inplace.cpp`
+* create `multiplication_inplace.cpp`
+* create `subtraction_inplace.cpp`
 * GitHub Action:  automatic CFF validation
 * overloads for methods
 * submodule `doxygen.cfg`
