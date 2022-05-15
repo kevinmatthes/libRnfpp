@@ -47,6 +47,7 @@
 ### Added
 
 * add `preferred-citation`
+* GitHub Action:  automatic CFF validation
 * overloads for methods
 * submodule `doxygem.cfg`
 
