@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        assert_non_zero.cpp
+ * \file        assert_norm_non_zero.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,19 +41,16 @@
 
 
 /**
- * \brief   Ensure an object to be unequal to zero.
- * \param   other   The object to test.
- * \throws  invalid_argument    In case the object is zero.
+ * \brief   Ensure this vector to have a norm unequal to zero.
+ * \throws  invalid_argument    In case the norm is zero.
  *
- * This method tests whether the given object is zero.  If so, an exception will
- * be thrown.
+ * This method tests whether this vector's norm is zero.  If so, an exception
+ * will be thrown.
  */
 
-inline void Rnfpp :: assert_non_zero (const float other) const
+inline void Rnfpp :: assert_norm_non_zero () const
 {
-    if (! abs (other))
-        throw invalid_argument ("A value unequal to zero is required!");
-
+    this -> assert_non_zero (this -> norm ());
     return;
 }
 
