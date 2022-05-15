@@ -163,6 +163,7 @@ class Rnfpp
 
         EXPORT  float   distance        (const fvec_t & other)  const;
         EXPORT  float   distance        (const Rnfpp &  other)  const;
+        EXPORT  Rnfpp & homogenise      (void);
         EXPORT  float   inner           (const fvec_t & other)  const;
         EXPORT  float   inner           (const Rnfpp &  other)  const;
         EXPORT  float   norm            (void)                  const noexcept;
