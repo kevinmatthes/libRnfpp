@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        homogenise.cpp
+ * \file        affinise.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,15 +41,18 @@
 
 
 /**
- * \brief   Homogenise this vector.
- * \return  The homogenised vector.
+ * \brief   Affinise this vector.
+ * \return  The affinised vector.
  *
- * This method homogenises this vector.
+ * This method affinises this vector.
  */
 
-inline Rnfpp & Rnfpp :: homogenise (void)
+inline Rnfpp & Rnfpp :: affinise (void)
 {
-    this -> components.push_back (0x1);
+    this -> assert_affinisation ();
+    const float scalar = (* this)[this -> get_dimension () - 0x1];
+    this -> components.pop_back ();
+    (* this) /= scalar;
     return (* this);
 }
 
