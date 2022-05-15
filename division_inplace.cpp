@@ -53,7 +53,7 @@ inline Rnfpp & Rnfpp :: operator /= (const float other)
 {
     this -> assert_non_zero (other);
     this -> set_components ((* this) / other);
-    return (Rnfpp &) (* this);
+    return (* this);
 }
 
 /******************************************************************************/

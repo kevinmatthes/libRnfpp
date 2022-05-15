@@ -48,15 +48,10 @@
  * This method returns the difference vector.
  */
 
-Rnfpp Rnfpp :: operator - (const float other) const noexcept
+inline Rnfpp & Rnfpp :: operator -= (const float other) noexcept
 {
-    const float dimension   = this -> get_dimension ();
-    fvec_t      ret         = fvec_t (dimension);
-
-    for (dimension_t i = 0x0; i < dimension; i++)
-        ret.at (i) = other;
-
-    return (* this) - Rnfpp (other);
+    this -> set_components ((* this) - other);
+    return (* this);
 }
 
 
@@ -72,10 +67,11 @@ Rnfpp Rnfpp :: operator - (const float other) const noexcept
  * different dimensions, an according exception will be thrown.
  */
 
-inline Rnfpp Rnfpp :: operator - (const fvec_t & other) const
+inline Rnfpp & Rnfpp :: operator -= (const fvec_t & other)
 {
     this -> assert_same_dimension (other);
-    return (* this) - Rnfpp (other);
+    this -> set_components ((* this) - other);
+    return (* this);
 }
 
 
@@ -91,16 +87,11 @@ inline Rnfpp Rnfpp :: operator - (const fvec_t & other) const
  * different dimensions, an according exception will be thrown.
  */
 
-Rnfpp Rnfpp :: operator - (const Rnfpp & other) const
+inline Rnfpp & Rnfpp :: operator -= (const Rnfpp & other)
 {
     this -> assert_same_dimension (other);
-
-    Rnfpp ret = Rnfpp (this -> get_dimension ());
-
-    for (dimension_t i = 0x0; i < this -> get_dimension (); i++)
-        ret[i] = (* this)[i] - other[i];
-
-    return ret;
+    this -> set_components ((* this) - other);
+    return (* this);
 }
 
 /******************************************************************************/

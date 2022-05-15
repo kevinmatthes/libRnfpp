@@ -51,7 +51,7 @@
 inline Rnfpp & Rnfpp :: operator += (const float other) noexcept
 {
     this -> set_components ((* this) + other);
-    return (Rnfpp &) (* this);
+    return (* this);
 }
 
 
@@ -71,7 +71,7 @@ inline Rnfpp & Rnfpp :: operator += (const fvec_t & other)
 {
     this -> assert_same_dimension (other);
     this -> set_components ((* this) + other);
-    return (Rnfpp &) (* this);
+    return (* this);
 }
 
 
@@ -91,7 +91,7 @@ inline Rnfpp & Rnfpp :: operator += (const Rnfpp & other)
 {
     this -> assert_same_dimension (other);
     this -> set_components ((*this) + other);
-    return (Rnfpp &) (* this);
+    return (* this);
 }
 
 /******************************************************************************/
