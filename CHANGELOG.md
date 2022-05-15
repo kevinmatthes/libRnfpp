@@ -44,6 +44,8 @@
 
 ## [Unreleased]
 
+## [0.1.2] -- 2022-05-15
+
 ### Added
 
 * create `affinise.cpp`
