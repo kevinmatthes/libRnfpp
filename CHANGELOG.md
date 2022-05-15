@@ -46,6 +46,7 @@
 
 ### Added
 
+* create `assert_norm_non_zero.cpp`
 * create `homogenise.cpp`
 * create `normalise.cpp`
 
