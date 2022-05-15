@@ -52,6 +52,10 @@
 
 * rename `~Rnfpp.cpp` to `destructor.cpp`
 
+### Fixed
+
+* missing documentation for destructor source file
+
 ## [0.1.1] -- 2022-05-15
 
 ### Added
