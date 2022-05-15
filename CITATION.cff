@@ -36,8 +36,8 @@ cff-version: 1.2.0
 message: Please cite this software using these meta data.
 
 # Version information.
-date-released: 2022-05-11
-version: 0.1.0
+date-released: 2022-05-15
+version: 0.1.1
 
 # Project information.
 abstract: A simple C++ vector library for real vectors with `float` components.
@@ -55,13 +55,13 @@ preferred-citation:
   authors:
     - family-names: Matthes
       given-names: Kevin
-  date-released: 2022-05-11
+  date-released: 2022-05-15
   license: GPL-2.0
   repository-code: https://github.com/kevinmatthes/libRnfpp
   title: libRnfpp
   url: https://github.com/kevinmatthes/libRnfpp
   type: software-code
-  version: 0.1.0
+  version: 0.1.1
 
 # References.
 references:
