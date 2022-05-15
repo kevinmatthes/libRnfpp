@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        assert_norm_non_zero.cpp
+ * \file        assert_affinisation.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,16 +41,21 @@
 
 
 /**
- * \brief   Ensure this vector to have a norm unequal to zero.
- * \throws  invalid_argument    In case the norm is zero.
+ * \brief   Ensure this vector to be affinisable.
+ * \throws  invalid_argument    In case it is not.
  *
- * This method tests whether this vector's norm is zero.  If so, an exception
- * will be thrown.
+ * This method tests whether this vector could be affinised.  If not so, an
+ * exception will be thrown.
  */
 
-inline void Rnfpp :: assert_norm_non_zero () const
+void Rnfpp :: assert_affinisation () const
 {
-    this -> assert_non_zero (this -> norm ());
+    const dimension_t dimension = this -> get_dimension ();
+
+    if (dimension <= 0x1)
+        throw invalid_argument ("Too few components to affinise!");
+
+    this -> assert_non_zero ((* this)[dimension - 0x1]);
     return;
 }
 
