@@ -48,6 +48,10 @@
 
 * create `homogenise.cpp`
 
+### Changed
+
+* rename `~Rnfpp.cpp` to `destructor.cpp`
+
 ## [0.1.1] -- 2022-05-15
 
 ### Added
