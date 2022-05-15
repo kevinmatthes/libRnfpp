@@ -48,7 +48,7 @@
  * This method returns the sum vector.
  */
 
-Rnfpp Rnfpp :: operator + (const float other) const noexcept
+Rnfpp & Rnfpp :: operator += (const float other) const noexcept
 {
     const float dimension   = this -> get_dimension ();
     fvec_t      ret         = fvec_t (dimension);
@@ -72,7 +72,7 @@ Rnfpp Rnfpp :: operator + (const float other) const noexcept
  * dimensions, an according exception will be thrown.
  */
 
-inline Rnfpp Rnfpp :: operator + (const fvec_t & other) const
+inline Rnfpp & Rnfpp :: operator += (const fvec_t & other) const
 {
     this -> assert_same_dimension (other);
     return (* this) + Rnfpp (other);
@@ -91,7 +91,7 @@ inline Rnfpp Rnfpp :: operator + (const fvec_t & other) const
  * dimensions, an according exception will be thrown.
  */
 
-Rnfpp Rnfpp :: operator + (const Rnfpp & other) const
+Rnfpp & Rnfpp :: operator += (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
 
