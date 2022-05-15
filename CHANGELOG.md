@@ -44,6 +44,10 @@
 
 ## [Unreleased]
 
+### Added
+
+* create `homogenise.cpp`
+
 ## [0.1.1] -- 2022-05-15
 
 ### Added
