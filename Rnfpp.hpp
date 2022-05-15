@@ -157,6 +157,7 @@ class Rnfpp
         EXPORT  float & operator [] (const dimension_t  index)  const;
 
         EXPORT  void assert_non_zero        (const float        other)  const;
+        EXPORT  void assert_norm_non_zero   (void)                      const;
         EXPORT  void assert_range           (const dimension_t  index)  const;
         EXPORT  void assert_same_dimension  (const fvec_t &     other)  const;
         EXPORT  void assert_same_dimension  (const Rnfpp &      other)  const;
