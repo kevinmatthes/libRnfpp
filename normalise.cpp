@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        norm.cpp
+ * \file        normalise.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,15 +41,18 @@
 
 
 /**
- * \brief   The Euclidean 2-norm.
- * \return  The Euclidean 2-norm of this vector.
+ * \brief   Normalise this vector.
+ * \return  The normalised vector.
  *
- * This method determines the Euclidean 2-norm of this vector.
+ * Normalise this vector by dividing it by its Euclidean 2-norm.
  */
 
-inline float Rnfpp :: norm (void) const noexcept
+inline Rnfpp & Rnfpp :: normalise (void)
 {
-    return sqrt (pow (this -> inner ((* this)), 0x2));
+    const float norm = this -> norm ();
+    this -> assert_non_zero (norm);
+    (* this) /= norm;
+    return (* this);
 }
 
 /******************************************************************************/
