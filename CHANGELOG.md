@@ -47,6 +47,7 @@
 ### Added
 
 * create `homogenise.cpp`
+* create `normalise.cpp`
 
 ### Changed
 
