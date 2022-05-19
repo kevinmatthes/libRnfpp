@@ -48,7 +48,7 @@
  * exception will be thrown.
  */
 
-void Rnfpp :: assert_affinisation () const
+void Rnfpp :: assert_affinisation (void) const
 {
     const dimension_t dimension = this -> get_dimension ();
 
