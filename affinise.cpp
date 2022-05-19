@@ -42,7 +42,6 @@
 
 /**
  * \brief   Affinise this vector.
- * \return  The affinised vector.
  *
  * This method affinises this vector.
  */

@@ -42,7 +42,6 @@
 
 /**
  * \brief   Homogenise this vector.
- * \return  The homogenised vector.
  *
  * This method homogenises this vector.
  */

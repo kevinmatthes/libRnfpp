@@ -42,7 +42,6 @@
 
 /**
  * \brief   Normalise this vector.
- * \return  The normalised vector.
  *
  * Normalise this vector by dividing it by its Euclidean 2-norm.
  */
