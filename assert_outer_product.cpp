@@ -42,6 +42,7 @@
 
 /**
  * \brief   Ensure the outer product to be calculatable.
+ * \param   other   The vector to calculate the outer product with.
  * \throws  invalid_argument    In case it is not.
  *
  * This method tests whether an outer product can be determined from this vector
@@ -64,6 +65,7 @@ inline void Rnfpp :: assert_outer_product (const fvec_t & other) const
 
 /**
  * \brief   Ensure the outer product to be calculatable.
+ * \param   other   The vector to calculate the outer product with.
  * \throws  invalid_argument    In case it is not.
  *
  * This method tests whether an outer product can be determined from this vector
