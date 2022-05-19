@@ -172,6 +172,7 @@ class Rnfpp
         EXPORT  float   inner           (const Rnfpp &  other)  const;
         EXPORT  float   norm            (void)                  const noexcept;
         EXPORT  void    normalise       (void);
+        EXPORT  Rnfpp   outer           (const fvec_t & other)  const;
         EXPORT  Rnfpp   outer           (const Rnfpp & other)   const;
         EXPORT  bool    same_dimension  (const fvec_t & other)  const noexcept;
         EXPORT  bool    same_dimension  (const Rnfpp &  other)  const noexcept;
