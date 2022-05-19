@@ -47,11 +47,11 @@
  * Normalise this vector by dividing it by its Euclidean 2-norm.
  */
 
-inline Rnfpp & Rnfpp :: normalise (void)
+inline void Rnfpp :: normalise (void)
 {
     this -> assert_norm_non_zero ();
     (* this) /= this -> norm ();
-    return (* this);
+    return;
 }
 
 /******************************************************************************/
