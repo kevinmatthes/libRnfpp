@@ -44,6 +44,10 @@
 
 ## [Unreleased]
 
+### Added
+
+* create `assert_outer_product.cpp`
+
 ## [0.1.2] -- 2022-05-15
 
 ### Added
