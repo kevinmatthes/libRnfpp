@@ -48,6 +48,28 @@
  * and the other one.  If not so, an exception will be thrown.
  */
 
+inline void Rnfpp :: assert_outer_product (const fvec_t & other) const
+{
+    this -> assert_same_dimension (other);
+
+    const dimension_t dimension = this -> get_dimension ();
+
+    if (dimension != 0x2 && dimension != 0x3)
+        throw invalid_argument ("The outer product requires dimension 2 or 3!");
+
+    return;
+}
+
+
+
+/**
+ * \brief   Ensure the outer product to be calculatable.
+ * \throws  invalid_argument    In case it is not.
+ *
+ * This method tests whether an outer product can be determined from this vector
+ * and the other one.  If not so, an exception will be thrown.
+ */
+
 inline void Rnfpp :: assert_outer_product (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);

@@ -159,6 +159,7 @@ class Rnfpp
         EXPORT  void assert_affinisation    (void)                      const;
         EXPORT  void assert_non_zero        (const float        other)  const;
         EXPORT  void assert_norm_non_zero   (void)                      const;
+        EXPORT  void assert_outer_product   (const fvec_t &     other)  const;
         EXPORT  void assert_outer_product   (const Rnfpp &      other)  const;
         EXPORT  void assert_range           (const dimension_t  index)  const;
         EXPORT  void assert_same_dimension  (const fvec_t &     other)  const;
