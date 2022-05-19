@@ -22,7 +22,7 @@
  * \copyright   (C) 2022 Kevin Matthes.
  *              This file is licensed GPL 2 as of June 1991.
  * \date        2022
- * \file        assert_affinisation.cpp
+ * \file        assert_outer_product.cpp
  * \note        See `LICENSE' for full license.
  *              See `README.md' for project details.
  *
@@ -41,21 +41,22 @@
 
 
 /**
- * \brief   Ensure this vector to be affinisable.
+ * \brief   Ensure the outer product to be calculatable.
  * \throws  invalid_argument    In case it is not.
  *
- * This method tests whether this vector could be affinised.  If not so, an
- * exception will be thrown.
+ * This method tests whether an outer product can be determined from this vector
+ * and the other one.  If not so, an exception will be thrown.
  */
 
-void Rnfpp :: assert_affinisation () const
+void Rnfpp :: assert_outer_product (const Rnfpp & other) const
 {
+    this -> assert_same_dimension (other);
+
     const dimension_t dimension = this -> get_dimension ();
 
-    if (dimension <= 0x1)
-        throw invalid_argument ("Too few components to affinise!");
+    if (dimension != 0x2 && dimension != 0x3)
+        throw invalid_argument ("The outer product requires dimension 2 or 3!");
 
-    this -> assert_non_zero ((* this)[dimension - 0x1]);
     return;
 }
 
