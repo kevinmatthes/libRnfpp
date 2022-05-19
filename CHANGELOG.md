@@ -49,6 +49,10 @@
 * create `assert_outer_product.cpp`
 * create `outer.cpp`
 
+### Fixed
+
+* invalid return types
+
 ## [0.1.2] -- 2022-05-15
 
 ### Added
