@@ -51,7 +51,9 @@
 
 ### Fixed
 
+* inline more functions
 * invalid return types
+* missing `void` entries in parameter lists
 
 ## [0.1.2] -- 2022-05-15
 
