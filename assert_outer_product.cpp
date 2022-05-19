@@ -48,7 +48,7 @@
  * and the other one.  If not so, an exception will be thrown.
  */
 
-void Rnfpp :: assert_outer_product (const Rnfpp & other) const
+inline void Rnfpp :: assert_outer_product (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
 

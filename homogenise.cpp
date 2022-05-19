@@ -47,10 +47,10 @@
  * This method homogenises this vector.
  */
 
-inline Rnfpp & Rnfpp :: homogenise (void)
+inline void Rnfpp :: homogenise (void)
 {
     this -> components.push_back (0x1);
-    return (* this);
+    return;
 }
 
 /******************************************************************************/
