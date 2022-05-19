@@ -47,13 +47,13 @@
  * This method affinises this vector.
  */
 
-inline Rnfpp & Rnfpp :: affinise (void)
+inline void Rnfpp :: affinise (void)
 {
     this -> assert_affinisation ();
     const float scalar = (* this)[this -> get_dimension () - 0x1];
     this -> components.pop_back ();
     (* this) /= scalar;
-    return (* this);
+    return;
 }
 
 /******************************************************************************/
