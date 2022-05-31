@@ -64,6 +64,14 @@ compiler.out    = '*.o';
 compiler.self   = 'g++';
 compiler.call   = [compiler.self ' ' compiler.args ' ' compiler.in];
 
+linker.args = [ ' -shared -Wl,--out-implib,' archiver.out                    ...
+                ' -W1,--export-all-symbols-Wl,--enable-auto-image-base '     ...
+              ];
+linker.in   = '*.o';
+linker.out  = ['Rnfpp' '.dll'];
+linker.self = 'g++';
+linker.call = [linker.self ' -o ' linker.out  ' ' linker.args ' ' linker.in];
+
 
 
 % Miscellaneous.
@@ -84,10 +92,10 @@ disp ([misc.banner 'Begin build instruction.']);
 
 
 % Clean outdated library.
-fprintf ([misc.banner 'Remove outdated version of ' archiver.out ' ... ']);
+fprintf ([misc.banner 'Remove outdated version of ' linker.out ' ... ']);
 
-if length (glob (archiver.out));
-    delete (archiver.out);
+if length (glob (linker.out));
+    delete (linker.out);
 end;
 
 disp ('Done.');
@@ -116,11 +124,27 @@ end;
 
 
 
+% Call linker for DLL linking.
+if length (glob (archiver.out));
+    disp ([misc.banner 'Create DLL ' linker.out ' ...']);
+
+    disp (linker.call);
+    system (linker.call);
+
+    disp ([misc.banner 'Done.']);
+end;
+
+
+
 % Clean artifacts.
 fprintf ([misc.banner 'Remove build artifacts ... ']);
 
 if length (glob (compiler.out));
     delete (compiler.out);
+end;
+
+if length (glob (archiver.out));
+    delete (archiver.out);
 end;
 
 disp ('Done.');
