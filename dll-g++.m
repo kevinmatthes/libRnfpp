@@ -59,18 +59,19 @@ compiler.args   = [ ' -std=c++11 -Wall -Werror -Wextra -Wpedantic -c '       ...
                     ' -D__RNFPP_INTERNAL__ '                                 ...
                     ' -D__WINDOWS__ -D__MAKE_DLL__ '                         ...
                   ];
-compiler.in     = '*.cpp';
+compiler.in     = glob ('*.cpp');
 compiler.out    = '*.o';
 compiler.self   = 'g++';
-compiler.call   = [compiler.self ' ' compiler.args ' ' compiler.in];
+compiler.call   = [compiler.self ' ' compiler.args ' '];
 
 linker.args = [ ' -shared -Wl,--out-implib,' archiver.out                    ...
-                ' -W1,--export-all-symbols -Wl,--enable-auto-image-base '    ...
+                ' -Wl,--enable-auto-image-base '    ...
               ];
-linker.in   = '*.o';
+%' -W1,--export-all-symbols
+linker.in   = glob('*.o');
 linker.out  = ['Rnfpp' '.dll'];
 linker.self = 'g++';
-linker.call = [linker.self ' -o ' linker.out  ' ' linker.args ' ' linker.in];
+linker.call = [linker.self ' -o ' linker.out  ' ' linker.args ' '];
 
 
 
@@ -105,8 +106,10 @@ disp ('Done.');
 % Call C++ compiler.
 disp ([misc.banner 'Compile object files ...']);
 
-disp (compiler.call);
-system (compiler.call);
+for cpp = 1 : length (compiler.in);
+	disp ([compiler.call ' ' compiler.in{cpp}]);
+	system ([compiler.call ' ' compiler.in{cpp}]);
+end;
 
 disp ([misc.banner 'Done.']);
 
@@ -124,12 +127,16 @@ end;
 
 
 
-% Call linker for DLL linking.
+% Call linker for DLL linking
 if length (glob (archiver.out));
+	
     disp ([misc.banner 'Create DLL ' linker.out ' ...']);
-
-    disp (linker.call);
-    system (linker.call);
+	input = '';
+	for o = 1 : length (linker.in);
+		input = [input ' ' linker.in{o}];
+	end;
+    disp ([linker.call ' ' input]);
+    system ([linker.call ' ' input]);
 
     disp ([misc.banner 'Done.']);
 end;
