@@ -68,7 +68,7 @@ linker.args = [ ' -shared -Wl,--out-implib,' archiver.out                    ...
                 ' -Wl,--enable-auto-image-base '    ...
               ];
 %' -W1,--export-all-symbols
-linker.in   = glob('*.o');
+linker.in   = glob ('*.o');
 linker.out  = ['Rnfpp' '.dll'];
 linker.self = 'g++';
 linker.call = [linker.self ' -o ' linker.out  ' ' linker.args ' '];
@@ -106,10 +106,14 @@ disp ('Done.');
 % Call C++ compiler.
 disp ([misc.banner 'Compile object files ...']);
 
+input = '';
+
 for cpp = 1 : length (compiler.in);
-	disp ([compiler.call ' ' compiler.in{cpp}]);
-	system ([compiler.call ' ' compiler.in{cpp}]);
+    input = [input ' ' compiler.in{cpp}];
 end;
+
+disp ([compiler.call ' ' input]);
+system ([compiler.call ' ' input]);
 
 disp ([misc.banner 'Done.']);
 
@@ -129,12 +133,14 @@ end;
 
 % Call linker for DLL linking
 if length (glob (archiver.out));
-	
     disp ([misc.banner 'Create DLL ' linker.out ' ...']);
-	input = '';
-	for o = 1 : length (linker.in);
-		input = [input ' ' linker.in{o}];
-	end;
+
+    input = '';
+
+    for o = 1 : length (linker.in);
+        input = [input ' ' linker.in{o}];
+    end;
+
     disp ([linker.call ' ' input]);
     system ([linker.call ' ' input]);
 
