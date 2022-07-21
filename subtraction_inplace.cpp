@@ -48,7 +48,7 @@
  * This method returns the difference vector.
  */
 
-inline Rnfpp & Rnfpp :: operator -= (const float other) noexcept
+Rnfpp & Rnfpp :: operator -= (const float other) noexcept
 {
     this -> set_components ((* this) - other);
     return (* this);
@@ -67,7 +67,7 @@ inline Rnfpp & Rnfpp :: operator -= (const float other) noexcept
  * different dimensions, an according exception will be thrown.
  */
 
-inline Rnfpp & Rnfpp :: operator -= (const fvec_t & other)
+Rnfpp & Rnfpp :: operator -= (const fvec_t & other)
 {
     this -> assert_same_dimension (other);
     this -> set_components ((* this) - other);
@@ -87,7 +87,7 @@ inline Rnfpp & Rnfpp :: operator -= (const fvec_t & other)
  * different dimensions, an according exception will be thrown.
  */
 
-inline Rnfpp & Rnfpp :: operator -= (const Rnfpp & other)
+Rnfpp & Rnfpp :: operator -= (const Rnfpp & other)
 {
     this -> assert_same_dimension (other);
     this -> set_components ((* this) - other);

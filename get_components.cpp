@@ -47,7 +47,7 @@
  * The getter method for the components held by this vector.
  */
 
-inline fvec_t & Rnfpp :: get_components (void) const noexcept
+fvec_t & Rnfpp :: get_components (void) const noexcept
 {
     return (fvec_t &) this -> components;
 }

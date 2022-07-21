@@ -46,7 +46,7 @@
  * This method affinises this vector.
  */
 
-inline void Rnfpp :: affinise (void)
+void Rnfpp :: affinise (void)
 {
     this -> assert_affinisation ();
     const float scalar = (* this)[this -> get_dimension () - 0x1];

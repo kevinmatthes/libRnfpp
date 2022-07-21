@@ -48,7 +48,7 @@
  * will be thrown.
  */
 
-inline void Rnfpp :: assert_norm_non_zero (void) const
+void Rnfpp :: assert_norm_non_zero (void) const
 {
     this -> assert_non_zero (this -> norm ());
     return;

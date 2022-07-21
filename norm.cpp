@@ -47,7 +47,7 @@
  * This method determines the Euclidean 2-norm of this vector.
  */
 
-inline float Rnfpp :: norm (void) const noexcept
+float Rnfpp :: norm (void) const noexcept
 {
     return sqrt (pow (this -> inner ((* this)), 0x2));
 }

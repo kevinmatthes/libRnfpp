@@ -49,7 +49,7 @@
  * position.  If not so, an according exception will be thrown.
  */
 
-inline void Rnfpp :: assert_range (const dimension_t index) const
+void Rnfpp :: assert_range (const dimension_t index) const
 {
     if (index >= this -> get_dimension ())
         throw out_of_range ("This index position does not exist!");

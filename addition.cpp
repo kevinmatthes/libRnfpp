@@ -72,7 +72,7 @@ Rnfpp Rnfpp :: operator + (const float other) const noexcept
  * dimensions, an according exception will be thrown.
  */
 
-inline Rnfpp Rnfpp :: operator + (const fvec_t & other) const
+Rnfpp Rnfpp :: operator + (const fvec_t & other) const
 {
     this -> assert_same_dimension (other);
     return (* this) + Rnfpp (other);

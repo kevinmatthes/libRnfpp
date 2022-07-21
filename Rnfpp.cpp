@@ -46,7 +46,7 @@
  * This is the default constructor which will prepare a new vector.
  */
 
-inline Rnfpp :: Rnfpp (void)
+Rnfpp :: Rnfpp (void)
 {
     Rnfpp (0x0);
     return;
@@ -63,7 +63,7 @@ inline Rnfpp :: Rnfpp (void)
  * resulting object.
  */
 
-inline Rnfpp :: Rnfpp (const dimension_t dimension)
+Rnfpp :: Rnfpp (const dimension_t dimension)
 {
     this -> components = fvec_t (dimension);
     return;
@@ -98,7 +98,7 @@ Rnfpp :: Rnfpp (const fvec_t & components)
  * This constructor will create a deep copy of the given existing object.
  */
 
-inline Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
+Rnfpp :: Rnfpp (const Rnfpp & rnfpp)
 {
     Rnfpp (rnfpp.get_components ());
     return;

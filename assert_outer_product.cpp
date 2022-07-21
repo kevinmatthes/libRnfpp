@@ -49,7 +49,7 @@
  * and the other one.  If not so, an exception will be thrown.
  */
 
-inline void Rnfpp :: assert_outer_product (const fvec_t & other) const
+void Rnfpp :: assert_outer_product (const fvec_t & other) const
 {
     this -> assert_same_dimension (other);
 
@@ -72,7 +72,7 @@ inline void Rnfpp :: assert_outer_product (const fvec_t & other) const
  * and the other one.  If not so, an exception will be thrown.
  */
 
-inline void Rnfpp :: assert_outer_product (const Rnfpp & other) const
+void Rnfpp :: assert_outer_product (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
 

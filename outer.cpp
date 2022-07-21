@@ -49,7 +49,7 @@
  * This method determines the outer product of this vector with the other one.
  */
 
-inline Rnfpp Rnfpp :: outer (const fvec_t & other) const
+Rnfpp Rnfpp :: outer (const fvec_t & other) const
 {
     this -> assert_outer_product (other);
     return this -> outer (Rnfpp (other));

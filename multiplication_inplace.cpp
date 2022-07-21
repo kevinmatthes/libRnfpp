@@ -48,7 +48,7 @@
  * This method will scale this vector by the given scalar.
  */
 
-inline Rnfpp & Rnfpp :: operator *= (const float other) noexcept
+Rnfpp & Rnfpp :: operator *= (const float other) noexcept
 {
     this -> set_components ((* this) * other);
     return (* this);

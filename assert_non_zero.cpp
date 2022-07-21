@@ -49,7 +49,7 @@
  * be thrown.
  */
 
-inline void Rnfpp :: assert_non_zero (const float other) const
+void Rnfpp :: assert_non_zero (const float other) const
 {
     if (! abs (other))
         throw invalid_argument ("A value unequal to zero is required!");
