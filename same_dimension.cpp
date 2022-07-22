@@ -49,7 +49,7 @@
  * other one.
  */
 
-inline bool Rnfpp :: same_dimension (const fvec_t & other) const noexcept
+bool Rnfpp :: same_dimension (const fvec_t & other) const noexcept
 {
     return this -> get_dimension () == other.size ();
 }
@@ -65,7 +65,7 @@ inline bool Rnfpp :: same_dimension (const fvec_t & other) const noexcept
  * other one.
  */
 
-inline bool Rnfpp :: same_dimension (const Rnfpp & other) const noexcept
+bool Rnfpp :: same_dimension (const Rnfpp & other) const noexcept
 {
     return this -> get_dimension () == other.get_dimension ();
 }

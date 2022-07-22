@@ -49,7 +49,7 @@
  * other one.  If not so, an exception will be thrown.
  */
 
-inline void Rnfpp :: assert_same_dimension (const fvec_t & other) const
+void Rnfpp :: assert_same_dimension (const fvec_t & other) const
 {
     if (! this -> same_dimension (other))
         throw invalid_argument ("The given vectors have different dimensions!");
@@ -68,7 +68,7 @@ inline void Rnfpp :: assert_same_dimension (const fvec_t & other) const
  * other one.  If not so, an exception will be thrown.
  */
 
-inline void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
+void Rnfpp :: assert_same_dimension (const Rnfpp & other) const
 {
     if (! this -> same_dimension (other))
         throw invalid_argument ("The given vectors have different dimensions!");

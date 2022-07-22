@@ -49,7 +49,7 @@
  * This method will scale this vector by the given scalar by division.
  */
 
-inline Rnfpp & Rnfpp :: operator /= (const float other)
+Rnfpp & Rnfpp :: operator /= (const float other)
 {
     this -> assert_non_zero (other);
     this -> set_components ((* this) / other);

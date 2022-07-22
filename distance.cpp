@@ -49,7 +49,7 @@
  * This method determines the distance between this vector and the other one.
  */
 
-inline float Rnfpp :: distance (const fvec_t & other) const
+float Rnfpp :: distance (const fvec_t & other) const
 {
     this -> assert_same_dimension (other);
     return ((* this) - Rnfpp (other)).norm ();
@@ -66,7 +66,7 @@ inline float Rnfpp :: distance (const fvec_t & other) const
  * This method determines the distance between this vector and the other one.
  */
 
-inline float Rnfpp :: distance (const Rnfpp & other) const
+float Rnfpp :: distance (const Rnfpp & other) const
 {
     this -> assert_same_dimension (other);
     return ((* this) - other).norm ();

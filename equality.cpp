@@ -49,7 +49,7 @@
  * the same dimension *and* the same components.
  */
 
-inline bool Rnfpp :: operator == (const fvec_t & other) const noexcept
+bool Rnfpp :: operator == (const fvec_t & other) const noexcept
 {
     return this -> same_dimension (other) ? (* this) == Rnfpp (other) : false;
 }
